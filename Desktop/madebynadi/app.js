@@ -146,7 +146,7 @@ function handleMessage(sender_psid, received_message) {
   }
   else if (received_message.text == "home") {
     response = {
-      "text":'ok',
+      "text":"ok",
     }
   }
   else if (received_message.text == "button") {
