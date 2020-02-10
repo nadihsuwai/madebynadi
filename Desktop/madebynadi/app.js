@@ -129,7 +129,7 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": "chooes pk",
+      "text": "choose location",
       "quick_replies":[
       {
         "content_type":"text",
@@ -146,33 +146,7 @@ function handleMessage(sender_psid, received_message) {
   }
   else if (received_message.text == "home") {
     response = {
-     "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":"Try the postback button!",
-        "buttons":[
-        "buttons":[ 
-          {
-            "type":"postback",
-            "title":"Sell",
-            "payload":"one"
-          },
-          {
-            "type":"postback",
-            "title":"Buy",
-            "payload":"two"
-          },
-          {
-            "type":"postback",
-            "title":"Trend",
-            "payload":"three"
-          }
-        ]
-      }
-    }
-  }
-  }
+      "text":'choose package'
     }
   }
   else if (received_message.text == "button") {
