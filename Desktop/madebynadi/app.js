@@ -146,7 +146,33 @@ function handleMessage(sender_psid, received_message) {
   }
   else if (received_message.text == "home") {
     response = {
-      "text":'ok'
+     "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Try the postback button!",
+        "buttons":[
+        "buttons":[ 
+          {
+            "type":"postback",
+            "title":"Sell",
+            "payload":"one"
+          },
+          {
+            "type":"postback",
+            "title":"Buy",
+            "payload":"two"
+          },
+          {
+            "type":"postback",
+            "title":"Trend",
+            "payload":"three"
+          }
+        ]
+      }
+    }
+  }
+  }
     }
   }
   else if (received_message.text == "button") {
