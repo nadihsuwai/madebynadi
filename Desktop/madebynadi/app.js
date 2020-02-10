@@ -129,19 +129,17 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": "Pick a color:",
+      "text": "chooes pk",
       "quick_replies":[
       {
         "content_type":"text",
-        "title":"Red", 
-        "payload":"<POSTBACK_PAYLOAD>",
-        "image_url":"http://example.com/img/red.png"
+        "title":"home", 
+        "payload":"<POSTBACK_PAYLOAD>"
       },
       {
         "content_type":"text",
-        "title":"Green",
-        "payload":"<POSTBACK_PAYLOAD>",
-        "image_url":"http://example.com/img/green.png"
+        "title":"shop",
+        "payload":"<POSTBACK_PAYLOAD>"
       }
     ]
     }
