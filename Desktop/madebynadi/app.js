@@ -149,34 +149,7 @@ function handleMessage(sender_psid, received_message) {
       "text":'Hello..Min Ga Lar Par Shint. What can I help You?'
     }
   }
-  else if (received_message.text == "button") {
-    response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"button",
-        "text":"Try the postback button!",
-        "buttons":[ 
-          {
-            "type":"postback",
-            "title":"Sell",
-            "payload":"one"
-          },
-          {
-            "type":"postback",
-            "title":"Buy",
-            "payload":"two"
-          },
-          {
-            "type":"postback",
-            "title":"Trend",
-            "payload":"three"
-          }
-        ]
-      }
-    }
-  }
-  }else if (received_message.text == "slide") {
+ else if (received_message.text == "slide") {
     response = {
     "attachment":{
       "type":"template",
