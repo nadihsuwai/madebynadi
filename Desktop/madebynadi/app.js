@@ -304,20 +304,36 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
     }
-  }else if (payload === 'cl') {
-    response = { "text": "ok",
-      "quick_replies":[
-      {
-        "content_type":"text",
-        "title":"home", 
-        "payload":"<POSTBACK_PAYLOAD>"
-      },
-      {
-        "content_type":"text",
-        "title":"shop",
-        "payload":"<POSTBACK_PAYLOAD>"
-      }
-    ] }
+  }else if (payload === 'cbd') {
+    response = { 
+      "attachment": {
+                  "type": "template",
+                  "payload": {
+                   "template_type": "generic",
+                    "elements": [{
+                      "title": "OK",
+                      "subtitle": "choose package?",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "wedding",
+                          "payload": "wd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "graduation",
+                          "payload": "gd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "donation",
+                          "payload": "dn",
+                        }
+                      ],
+                    }]
+                  }
+                }
+    }
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
