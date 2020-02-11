@@ -287,7 +287,7 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "Thanks!" }
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
-  }else if (payload === 'gs') {
+  }else if (payload === 'get_started') {
     response = { "attachment": {
                   "type": "template",
                   "payload": {
@@ -349,7 +349,7 @@ function callSendAPI(sender_psid, response) {
 
 function setupGetStartedButton(res){
         var messageData = {
-                "get_started":{"payload":"gs"}                
+                "get_started":{"payload":"get_started"}                
         };
         // Start the request
         request({
