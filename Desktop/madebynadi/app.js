@@ -129,7 +129,7 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": "chooes pk",
+      "text": "chooes location",
       "quick_replies":[
       {
         "content_type":"text",
@@ -146,9 +146,15 @@ function handleMessage(sender_psid, received_message) {
   }
   else if (received_message.text == "home") {
     response = {
-      "text":'Hello..Min Ga Lar Par Shint. What can I help You?'
+      "text":'Ok!'
     }
   }
+  else if (received_message.text == "shop") {
+    response = {
+      "text":'Ok!'
+    }
+  }
+
  else if (received_message.text == "slide") {
     response = {
     "attachment":{
