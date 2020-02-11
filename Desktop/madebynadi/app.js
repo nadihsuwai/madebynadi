@@ -146,7 +146,7 @@ function handleMessage(sender_psid, received_message) {
   }
   else if (received_message.text == "home") {
     response = {
-      "text":'Ok!'
+      "text":'please send me address'
     }
   }
   else if (received_message.text == "shop") {
