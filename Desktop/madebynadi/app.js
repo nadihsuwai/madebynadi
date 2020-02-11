@@ -317,7 +317,7 @@ function handlePostback(sender_psid, received_postback) {
         "payload":"<POSTBACK_PAYLOAD>"
       }
     ] }
-  }else
+  }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
