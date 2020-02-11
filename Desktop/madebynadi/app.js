@@ -134,11 +134,11 @@ function handleMessage(sender_psid, received_message) {
   }
   else if (received_message.text == "home") {
     response = {
-      "text":'please send me address'
+      "text":'please send me details address'
     }
   }else if (received_message.text == "shop") {
     response = {
-      "text":'ok! see you.'
+      "text": ' building(1315) room(13) is my address ok! see you.'
     }
   }
  
@@ -334,6 +334,20 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
     }
+  }
+   else if (payload === 'cl') {
+    response = { "text": "Do you want any suggestions?",
+     "quick_replies"
+                  {
+                    "content_type":"text",
+                    "title":"home",
+                    "payload":"D"
+                  },{
+                    "content_type":"text",
+                    "title":"shop",
+                    "payload":"IWC"
+                  }
+  
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
