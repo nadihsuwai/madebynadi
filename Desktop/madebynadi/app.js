@@ -125,7 +125,7 @@ function handleMessage(sender_psid, received_message) {
   let response;
   
   // Checks if the message contains text
-  if (received_message.text == "hi") {    
+  if (received_message.text == "cl") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -148,13 +148,12 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text":'please send me address'
     }
-  }
-  else if (received_message.text == "shop") {
+  }else if (received_message.text == "shop") {
     response = {
-      "text":'Ok!'
+      "text":'ok! see you.'
     }
   }
-
+ 
  else if (received_message.text == "slide") {
     response = {
     "attachment":{
@@ -288,6 +287,35 @@ function handlePostback(sender_psid, received_postback) {
     response = { "text": "Thanks!" }
   } else if (payload === 'no') {
     response = { "text": "Oops, try sending another image." }
+  }else if (payload === 'gs') {
+    response = { "attachment": {
+                  "type": "template",
+                  "payload": {
+                   "template_type": "generic",
+                    "elements": [{
+                      "title": "Hello Wecome",
+                      "subtitle": "What do you want?",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "view feedback",
+                          "payload": "vf",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "choose booking date",
+                          "payload": "cbd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "choose location",
+                          "payload": "cl",
+                        }
+                      ],
+                    }]
+                  }
+                }
+    }
   }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
@@ -321,7 +349,7 @@ function callSendAPI(sender_psid, response) {
 
 function setupGetStartedButton(res){
         var messageData = {
-                "get_started":{"payload":"USER_DEFINED_PAYLOAD"}                
+                "get_started":{"payload":"gs"}                
         };
         // Start the request
         request({
