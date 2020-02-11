@@ -305,7 +305,8 @@ function handlePostback(sender_psid, received_postback) {
                 }
     }
   }else if (payload === 'cl') {
-    response = { "quick_replies":[
+    response = { "text" : 'Ok!'
+      "quick_replies":[
       {
         "content_type":"text",
         "title":"home", 
