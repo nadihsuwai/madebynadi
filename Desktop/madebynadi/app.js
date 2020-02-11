@@ -125,22 +125,11 @@ function handleMessage(sender_psid, received_message) {
   let response;
   
   // Checks if the message contains text
-  if (received_message.text == "choose location") {    
+  if (received_message.text == "hi") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "quick_replies":[
-      {
-        "content_type":"text",
-        "title":"home", 
-        "payload":"<POSTBACK_PAYLOAD>"
-      },
-      {
-        "content_type":"text",
-        "title":"shop",
-        "payload":"<POSTBACK_PAYLOAD>"
-      }
-    ]
+      "text": 'hello',
     }
   }
   else if (received_message.text == "home") {
@@ -315,7 +304,20 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
     }
-  }
+  }else if (payload === 'cl') {
+    response = { "quick_replies":[
+      {
+        "content_type":"text",
+        "title":"home", 
+        "payload":"<POSTBACK_PAYLOAD>"
+      },
+      {
+        "content_type":"text",
+        "title":"shop",
+        "payload":"<POSTBACK_PAYLOAD>"
+      }
+    ] }
+  }else
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
