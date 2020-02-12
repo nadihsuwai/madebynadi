@@ -161,8 +161,16 @@ function handleMessage(sender_psid, received_message) {
                     "title":"Cancle",
                     "payload":"IWC"
                   }]
+               (received_message.text == "Order") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank you for your making by mypage.',
+    }
+  }   
     }
   }
+
    else if (received_message.text == "Shop") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -178,23 +186,17 @@ function handleMessage(sender_psid, received_message) {
                     "title":"Cancle",
                     "payload":"IWC"
                   }]
+                  (received_message.text == "Order") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank you for your making by mypage.',
+    }
+  }
 
     }
   }
- else if (received_message.text == "Order") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'Thank for your making by mypage',
-    }
-  }
-   else if (received_message.text == "Cancle") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'OK!Thank.',
-    }
-  }
+ 
 
   
   else if (received_message.text == "home") {
