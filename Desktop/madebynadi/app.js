@@ -205,21 +205,23 @@ function handleMessage(sender_psid, received_message) {
 
     }
   }
-else if (received_message.text == "Order") {    
+else if (received_message.text == "Order") {   
+
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-       "text": '45000 kyats and will you make the order',
+       "text": 'Are you sure your order',
       "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"Order",
+                    "title":"Yes",
                     "payload":"D"
                   },{
                     "content_type":"text",
-                    "title":"Cancle",
+                    "title":"No",
                     "payload":"IWC"
                   }]
+
     }
   }
   else if (received_message.text == "Cancle") {    
