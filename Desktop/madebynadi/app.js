@@ -176,7 +176,14 @@ function handleMessage(sender_psid, received_message) {
       "text": ' building(1315) room(13) is my address ok! see you.'
     }
   }
- 
+  else if (received_message.text == "No") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'OK. Thank you!',
+    }
+  }
+  
  else if (received_message.text == "slide") {
     response = {
     "attachment":{
