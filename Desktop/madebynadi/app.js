@@ -428,7 +428,7 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
-  else if (payload === 'wd') {
+  else if (payload === 'Home') {
     response = { "text": " Make the order",
                   "quick_replies":[
                   {
