@@ -209,15 +209,15 @@ else if (received_message.text == "Order") {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Are you sure your order?',
+       "text": '45000 kyats and will you make the order',
       "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"Yes",
+                    "title":"Order",
                     "payload":"D"
                   },{
                     "content_type":"text",
-                    "title":"No",
+                    "title":"Cancle",
                     "payload":"IWC"
                   }]
     }
