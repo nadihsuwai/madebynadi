@@ -398,24 +398,7 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
-   else if (payload === 'wd') {
-    response = { "text": " view my package",
-                  "quick_replies":[
-                  {
-                    "content_type":"text",
-                    "title":"wedding",
-                    "payload":"wd"
-                  },{
-                    "content_type":"text",
-                    "title":"graduation",
-                    "payload":"wd"
-                  },{
-                    "content_type":"text",
-                    "title":"donation",
-                    "payload":"wd"
-                  }]
-     }
-  }
+   
 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
