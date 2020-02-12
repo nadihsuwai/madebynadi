@@ -160,20 +160,20 @@ function handleMessage(sender_psid, received_message) {
       "text": '45000',
     }
   }
-   else if (received_message.text == "Home") {    
+ else if (received_message.text == "Order") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Order',
+      "text": 'Thank for your making by my page.',
     }
-  } 
-   else if (received_message.text == "Shop") {    
+  }
+   else if (received_message.text == "Cancle") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Order',
+      "text": 'Ok!.',
     }
-  } 
+  }
 
   
   else if (received_message.text == "home") {
@@ -428,35 +428,20 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
-  else if (payload === 'Home') {
+  else if (payload === 'wd') {
     response = { "text": " Make the order",
                   "quick_replies":[
                   {
                     "content_type":"text",
                     "title":"Order",
-                    "payload":"wd"
+                    "payload":"o"
                   },{
                     "content_type":"text",
                     "title":"Cancle",
-                    "payload":"wd"
+                    "payload":"c"
                   }]
      }
   }
-   else if (payload === 'Shop') {
-    response = { "text": " Make the order",
-                  "quick_replies":[
-                  {
-                    "content_type":"text",
-                    "title":"Order",
-                    "payload":"wd"
-                  },{
-                    "content_type":"text",
-                    "title":"Cancle",
-                    "payload":"wd"
-                  }]
-     }
-  }
-
 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
