@@ -398,6 +398,24 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
+   else if (payload === 'cbd') {
+    response = { "text": " view my package",
+                  "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"wedding",
+                    "payload":"wd"
+                  },{
+                    "content_type":"text",
+                    "title":"graduation",
+                    "payload":"gd"
+                  },{
+                    "content_type":"text",
+                    "title":"donation",
+                    "payload":"dn"
+                  }]
+     }
+  }
 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
