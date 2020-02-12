@@ -180,6 +180,20 @@ function handleMessage(sender_psid, received_message) {
                   }]
     }
   }
+   else if (received_message.text == "Yes") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for my customer see you again.',
+    }
+  } 
+   else if (received_message.text == "No") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
   else if (received_message.text == "Cancle") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -224,6 +238,19 @@ else if (received_message.text == "Order") {
 
     }
   }
+   else if (received_message.text == "Yes") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for my customer see you again.',
+    }
+  }  else if (received_message.text == "No") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
   else if (received_message.text == "Cancle") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
