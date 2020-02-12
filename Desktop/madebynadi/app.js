@@ -146,27 +146,21 @@ function handleMessage(sender_psid, received_message) {
       "text": 'OK',
     }
   }
-   else if (received_message.text == "Yes") {    
+   else if (received_message.text == "Home") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank you for your choosing',
+      "text": '50000',
     }
   }
-   else if (received_message.text == "Yes") {    
+   else if (received_message.text == "Shop") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank you for your choosing',
+      "text": '45000',
     }
   }
-   else if (received_message.text == "Yes") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'Thank you for your choosing',
-    }
-  }
+  
   else if (received_message.text == "home") {
     response = {
       "text":'please send me details address'
@@ -183,7 +177,7 @@ function handleMessage(sender_psid, received_message) {
       "text": 'OK. Thank you!',
     }
   }
-  
+
  else if (received_message.text == "slide") {
     response = {
     "attachment":{
@@ -406,15 +400,15 @@ function handlePostback(sender_psid, received_postback) {
      }
   }
    else if (payload === 'wd') {
-    response = { "text": " Are you comfirm your choosing",
+    response = { "text": " choose package price for your choose location",
                   "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"Yes",
+                    "title":"Home",
                     "payload":"wd"
                   },{
                     "content_type":"text",
-                    "title":"No",
+                    "title":"Shop",
                     "payload":"wd"
                   }]
      }
