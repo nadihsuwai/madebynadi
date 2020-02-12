@@ -170,16 +170,7 @@ function handleMessage(sender_psid, received_message) {
       "text": ' building(1315) room(13) is my address ok! see you.'
     }
   }
-  else if (received_message.text == "Order") {
-    response = {
-      "text": 'Thank you.'
-    }
-  }
-  else if (received_message.text == "Cancle") {
-    response = {
-      "text": ' Ok'
-    }
-  }
+  
   else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -423,19 +414,6 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
- else if (received_message.text == "Home") {    
-    response = { "text" : "Do you wanna make the order",
-                  "quick_replies":[
-                  {
-                    "content_type":"text",
-                    "title":"Order",
-                    "payload":"o"
-                  },{
-                    "content_type":"text",
-                    "title":"Cancle",
-                    "payload":"c"
-                  }]
-     }
 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
