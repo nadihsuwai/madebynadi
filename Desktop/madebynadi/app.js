@@ -398,7 +398,7 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
-   else if (payload === 'cbd') {
+   else if (payload === 'wd') {
     response = { "text": " view my package",
                   "quick_replies":[
                   {
