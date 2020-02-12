@@ -129,7 +129,7 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'hello! Welcome madebynadi Page.Thank for visiting my page',
+      "text": 'hello! Welcome madebynadi Page.Thank for visiting my page.',
     }
   }
   else if (received_message.text == "Yes!") {    
@@ -150,26 +150,18 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": '50000',
+      "text": '50000 kyats and please send me details address',
     }
   }
    else if (received_message.text == "Shop") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": '45000',
+      "text": '45000 kyats and building(1315) room(13) is my address ok! see you.',
     }
   }
   
-  else if (received_message.text == "home") {
-    response = {
-      "text":'please send me details address'
-    }
-  }else if (received_message.text == "shop") {
-    response = {
-      "text": ' building(1315) room(13) is my address ok! see you.'
-    }
-  }
+ 
   else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
