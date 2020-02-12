@@ -160,6 +160,21 @@ function handleMessage(sender_psid, received_message) {
       "text": '45000',
     }
   }
+   else if (received_message.text == "Home") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Order',
+    }
+  } 
+   else if (received_message.text == "Shop") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Order',
+    }
+  } 
+
   
   else if (received_message.text == "home") {
     response = {
@@ -413,6 +428,35 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
+  else if (payload === 'Home') {
+    response = { "text": " Make the order",
+                  "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Order",
+                    "payload":"wd"
+                  },{
+                    "content_type":"text",
+                    "title":"Cancle",
+                    "payload":"wd"
+                  }]
+     }
+  }
+   else if (payload === 'Shop') {
+    response = { "text": " Make the order",
+                  "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Order",
+                    "payload":"wd"
+                  },{
+                    "content_type":"text",
+                    "title":"Cancle",
+                    "payload":"wd"
+                  }]
+     }
+  }
+
 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
