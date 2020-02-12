@@ -150,21 +150,21 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'OK',
+      "text": 'Thank you for your choosing',
     }
   }
    else if (received_message.text == "graduation") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'OK',
+      "text": 'Thnak you for your choosing',
     }
   }
    else if (received_message.text == "donation") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'OK',
+      "text": 'Thank you for your choosing',
     }
   }
   else if (received_message.text == "home") {
@@ -357,12 +357,12 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "graduation",
-                          "payload": "gd",
+                          "payload": "wd",
                         },
                         {
                           "type": "postback",
                           "title": "donation",
-                          "payload": "dn",
+                          "payload": "wd",
                         }
                       ],
                     }]
@@ -398,7 +398,7 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
-   else if (payload === 'cbd') {
+   else if (payload === 'wd') {
     response = { "text": " view my package",
                   "quick_replies":[
                   {
@@ -408,11 +408,11 @@ function handlePostback(sender_psid, received_postback) {
                   },{
                     "content_type":"text",
                     "title":"graduation",
-                    "payload":"gd"
+                    "payload":"wd"
                   },{
                     "content_type":"text",
                     "title":"donation",
-                    "payload":"dn"
+                    "payload":"wd"
                   }]
      }
   }
