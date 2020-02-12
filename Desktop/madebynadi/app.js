@@ -163,7 +163,13 @@ function handleMessage(sender_psid, received_message) {
                   }]
     }
   }
-  
+  else if (received_message.text == "Order") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for your order comfirm and make by mypage.',
+    }
+  }
    else if (received_message.text == "Shop") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -182,7 +188,13 @@ function handleMessage(sender_psid, received_message) {
 
     }
   }
- 
+else if (received_message.text == "Order") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for your order comfirm and make by mypage.',
+    }
+  } 
 
   
   else if (received_message.text == "home") {
