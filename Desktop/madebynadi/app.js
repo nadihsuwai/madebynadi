@@ -150,18 +150,36 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": '50000 kyats and please send me details address',
+      "text": '50000',
     }
   }
    else if (received_message.text == "Shop") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": '45000 kyats and building(1315) room(13) is my address ok! see you.',
+      "text": '45000',
     }
   }
   
- 
+  else if (received_message.text == "home") {
+    response = {
+      "text":'50000 kyats and please send me details address'
+    }
+  }else if (received_message.text == "shop") {
+    response = {
+      "text": ' 45000 kyats and building(1315) room(13) is my address ok! see you.'
+    }
+  }
+  else if (received_message.text == "order") {
+    response = {
+      "text": 'Thank you.'
+    }
+  }
+  else if (received_message.text == "cancle") {
+    response = {
+      "text": ' Ok'
+    }
+  }
   else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -405,7 +423,20 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
-
+  else if (received_message.text == "wd") {    
+     response = { "text": "Make the order", 
+                  "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"order",
+                    "payload":"o"
+                  },{
+                    "content_type":"text",
+                    "title":"cancle",
+                    "payload":"c"
+                  }]
+    }
+  }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
