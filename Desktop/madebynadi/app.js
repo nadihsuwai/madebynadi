@@ -146,21 +146,21 @@ function handleMessage(sender_psid, received_message) {
       "text": 'OK',
     }
   }
-   else if (received_message.text == "wedding") {    
+   else if (received_message.text == "Yes") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'Thank you for your choosing',
     }
   }
-   else if (received_message.text == "graduation") {    
+   else if (received_message.text == "Yes") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thnak you for your choosing',
+      "text": 'Thank you for your choosing',
     }
   }
-   else if (received_message.text == "donation") {    
+   else if (received_message.text == "Yes") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -398,7 +398,20 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
-   
+   else if (payload === 'wd') {
+    response = { "text": " Are you comfirm your choosing",
+                  "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Yes",
+                    "payload":"wd"
+                  },{
+                    "content_type":"text",
+                    "title":"No",
+                    "payload":"wd"
+                  }]
+     }
+  }
 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
