@@ -423,7 +423,7 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
-  else if (received_message.text == "wd") {    
+  else if (payload === 'wd') {   
      response = { "text": "Make the order", 
                   "quick_replies":[
                   {
