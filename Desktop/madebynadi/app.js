@@ -150,30 +150,37 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": '50000 ',
+      "text": '50000 kyats and will you make the order',
+       "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Order",
+                    "payload":"D"
+                  },{
+                    "content_type":"text",
+                    "title":"Cancle",
+                    "payload":"IWC"
+                  }]
     }
   }
    else if (received_message.text == "Shop") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": '45000',
+      "text": '45000 kyats and will you make the order',
+      "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Order",
+                    "payload":"D"
+                  },{
+                    "content_type":"text",
+                    "title":"Cancle",
+                    "payload":"IWC"
+                  }]
     }
   }
- else if (received_message.text == "Order") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'Thank for your making by my page.',
-    }
-  }
-   else if (received_message.text == "Cancle") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'Ok!.',
-    }
-  }
+
 
   
   else if (received_message.text == "home") {
@@ -428,20 +435,7 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
-  else if (payload === 'Home') {
-    response = { "text": " Make the order",
-                  "quick_replies":[
-                  {
-                    "content_type":"text",
-                    "title":"Order",
-                    "payload":"o"
-                  },{
-                    "content_type":"text",
-                    "title":"Cancle",
-                    "payload":"c"
-                  }]
-     }
-  }
+  
 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
