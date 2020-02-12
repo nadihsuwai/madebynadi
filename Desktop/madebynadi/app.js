@@ -349,6 +349,20 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
+  else if (payload === 'vf') {
+    response = { "text": "you can view my customer feedback?",
+                  "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Yes!",
+                    "payload":"D"
+                  },{
+                    "content_type":"text",
+                    "title":"No!",
+                    "payload":"IWC"
+                  }]
+     }
+  }
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
