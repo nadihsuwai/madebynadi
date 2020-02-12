@@ -146,6 +146,27 @@ function handleMessage(sender_psid, received_message) {
       "text": 'OK',
     }
   }
+   else if (received_message.text == "wedding") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'OK',
+    }
+  }
+   else if (received_message.text == "graduation") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'OK',
+    }
+  }
+   else if (received_message.text == "donation") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'OK',
+    }
+  }
   else if (received_message.text == "home") {
     response = {
       "text":'please send me details address'
