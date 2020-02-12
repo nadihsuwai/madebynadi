@@ -335,20 +335,7 @@ function handlePostback(sender_psid, received_postback) {
                 }
     }
   }
-   else if (payload === 'cl') {
-    response = { "text": "Do you want any suggestions?",
-     "quick_replies"
-                  {
-                    "content_type":"text",
-                    "title":"home",
-                    "payload":"D"
-                  },{
-                    "content_type":"text",
-                    "title":"shop",
-                    "payload":"IWC"
-                  }
-  
-  }
+   
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
