@@ -484,15 +484,15 @@ function handlePostback(sender_psid, received_postback) {
   }
   else if (received_message.text == "Order") {    
     response = {
-      "text": `Thanks! Your order will finish at 14feb.2020. Don't forget to check the order.`
+      "text": `Thanks! Your order.`
     }
   }else if (received_message.text == "Cancle") {    
     response = {
-      "text": `Opps! Do you want to adjust the appointment date?`,
+      "text": `ok.`,
       "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"Yes,pls.",
+                    "title":"Yes.",
                     "payload":"o"
                   },{
                     "content_type":"text",
