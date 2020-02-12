@@ -132,6 +132,13 @@ function handleMessage(sender_psid, received_message) {
       "text": 'hello',
     }
   }
+  else if (received_message.text == "Yes!") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank you',
+    }
+  }
   else if (received_message.text == "home") {
     response = {
       "text":'please send me details address'
@@ -350,7 +357,7 @@ function handlePostback(sender_psid, received_postback) {
      }
   }
   else if (payload === 'vf') {
-    response = { "text": "you can view my customer feedback?",
+    response = { "text": " Can you view my customer feedback?",
                   "quick_replies":[
                   {
                     "content_type":"text",
@@ -363,6 +370,7 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
+
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
