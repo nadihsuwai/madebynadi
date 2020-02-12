@@ -163,19 +163,19 @@ function handleMessage(sender_psid, received_message) {
   
   else if (received_message.text == "home") {
     response = {
-      "text":'50000 kyats and please send me details address'
+      "text":'please send me details address'
     }
   }else if (received_message.text == "shop") {
     response = {
-      "text": ' 45000 kyats and building(1315) room(13) is my address ok! see you.'
+      "text": ' building(1315) room(13) is my address ok! see you.'
     }
   }
-  else if (received_message.text == "order") {
+  else if (received_message.text == "Order") {
     response = {
       "text": 'Thank you.'
     }
   }
-  else if (received_message.text == "cancle") {
+  else if (received_message.text == "Cancle") {
     response = {
       "text": ' Ok'
     }
@@ -423,16 +423,80 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
-  else if (payload === 'wd') {   
-     response = { "text": "Make the order", 
+ else if (received_message.text == "wd") {    
+    response = { "text" : "Do you wanna make the order",
                   "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"order",
+                    "title":"Order",
+                    "payload":"D"
+                  },{
+                    "content_type":"text",
+                    "title":"Cancle",
+                    "payload":"IWC"
+                  }]
+     }
+     else if (received_message.text == "wd") {    
+    response = {
+       "attachment":{
+                  "type":"template",
+                  "payload":{
+                    "template_type":"generic",
+                    "elements":[
+                       {
+                        "title":"Beaded embroidery on the cloth",
+                        "image_url":"https://i.pinimg.com/236x/fc/aa/15/fcaa15d588bb3c3cd0cefcb671d3674f--unik-baju.jpg",
+                        "subtitle":"Like this.....",
+                        "default_action": {
+                          "type": "web_url",
+                          "url": "https://i.pinimg.com/236x/fc/aa/15/fcaa15d588bb3c3cd0cefcb671d3674f--unik-baju.jpg",
+                          "webview_height_ratio": "tall",
+                        },
+                        "buttons":[
+                         {
+                            "type":"postback",
+                            "title":"comfirm order",
+                            "payload":"cr"
+                          },{
+                            "type":"postback",
+                            "title":"don't order",
+                            "payload":"do"
+                          }              
+                        ]      
+                      }
+                      ]
+                   }
+                 }
+    }
+  }else if (received_message.text == "Order") {    
+     response = { "text": "make the order.", 
+                  "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Order",
                     "payload":"o"
                   },{
                     "content_type":"text",
-                    "title":"cancle",
+                    "title":"Cancle",
+                    "payload":"c"
+                  }]
+    }
+  }
+  else if (received_message.text == "Order") {    
+    response = {
+      "text": `Thanks! Your order will finish at 14feb.2020. Don't forget to check the order.`
+    }
+  }else if (received_message.text == "Cancle") {    
+    response = {
+      "text": `Opps! Do you want to adjust the appointment date?`,
+      "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Yes,pls.",
+                    "payload":"o"
+                  },{
+                    "content_type":"text",
+                    "title":"No,Thz.",
                     "payload":"c"
                   }]
     }
