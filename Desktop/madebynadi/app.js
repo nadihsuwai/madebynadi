@@ -431,7 +431,7 @@ function handlePostback(sender_psid, received_postback) {
                         },
                         {
                           "type": "postback",
-                          "title": "view customer photo",
+                          "title": "view sample photo",
                           "payload": "cl",
                         }
                       ],
