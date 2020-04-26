@@ -848,7 +848,7 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "During this week",
-                          "payload": "dm",
+                          "payload": "dm"
                         },
                       ],
                     }]
