@@ -446,7 +446,7 @@ function handlePostback(sender_psid, received_postback) {
                   "payload": {
                    "template_type": "generic",
                     "elements": [{
-                      "title": "OK",
+                      "title": "The date you will be booking",
                       "subtitle": "choose package?",
                       "buttons": [
                         {
