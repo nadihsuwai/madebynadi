@@ -416,7 +416,7 @@ function handlePostback(sender_psid, received_postback) {
                   "payload": {
                    "template_type": "generic",
                     "elements": [{
-                      "title": "welcome to my mady by nadi page",
+                      "title": "welcome my page mady by nadi",
                       "subtitle": "what can i help for u?",
                       "buttons": [
                         {
