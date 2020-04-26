@@ -432,7 +432,7 @@ function handlePostback(sender_psid, received_postback) {
                         {
                           "type": "postback",
                           "title": "view sample photo",
-                          "payload": "cl",
+                          "payload": "vp",
                         }
                       ],
                     }]
@@ -470,7 +470,7 @@ function handlePostback(sender_psid, received_postback) {
                 }
     }
   }
-  else if (payload === 'cl') {
+  else if (payload === 'vp') {
     response = { "text": "Do you choose the location?",
                   "quick_replies":[
                   {
