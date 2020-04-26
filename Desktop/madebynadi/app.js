@@ -146,6 +146,397 @@ function handleMessage(sender_psid, received_message) {
       "text": 'OK',
     }
   }
+   else if (received_message.text == "During this month") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'OK please choose the following',
+       "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"In the first week",
+                    "payload":"I"
+                  },{
+                    "content_type":"text",
+                    "title":"In the second week",
+                    "payload":"I"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"In the third week",
+                    "payload":"I"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"In the fourth week",
+                    "payload":"I"
+                  }]
+    }
+  }
+  else if (received_message.text == "In the first week ") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Please choose the exactly date',
+      "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Mon",
+                    "payload":"M"
+                  },{
+                    "content_type":"text",
+                    "title":"Tue",
+                    "payload":"Tu"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Wed",
+                    "payload":"W"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Thu",
+                    "payload":"Th"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Fri",
+                    "payload":"F"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Sat",
+                    "payload":"Sa"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Sun",
+                    "payload":"Su"
+                  }
+                  ]
+    }
+  }
+  else if (received_message.text == "Mon") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for my customer see you again.',
+    }
+  }  else if (received_message.text == "Tue") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Wed") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Thu") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Fri") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Sat") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Sun") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "In the Second week ") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Please choose the exactly date',
+      "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Mon",
+                    "payload":"M"
+                  },{
+                    "content_type":"text",
+                    "title":"Tue",
+                    "payload":"Tu"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Wed",
+                    "payload":"W"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Thu",
+                    "payload":"Th"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Fri",
+                    "payload":"F"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Sat",
+                    "payload":"Sa"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Sun",
+                    "payload":"Su"
+                  }
+                  ]
+    }
+  }
+  else if (received_message.text == "Mon") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for my customer see you again.',
+    }
+  }  else if (received_message.text == "Tue") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Wed") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Thu") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Fri") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Sat") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Sun") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+    else if (received_message.text == "In the third week ") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Please choose the exactly date',
+      "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Mon",
+                    "payload":"M"
+                  },{
+                    "content_type":"text",
+                    "title":"Tue",
+                    "payload":"Tu"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Wed",
+                    "payload":"W"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Thu",
+                    "payload":"Th"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Fri",
+                    "payload":"F"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Sat",
+                    "payload":"Sa"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Sun",
+                    "payload":"Su"
+                  }
+                  ]
+    }
+  }
+  else if (received_message.text == "Mon") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for my customer see you again.',
+    }
+  }  else if (received_message.text == "Tue") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Wed") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Thu") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Fri") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Sat") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Sun") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "In the fourth week ") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Please choose the exactly date',
+      "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Mon",
+                    "payload":"M"
+                  },{
+                    "content_type":"text",
+                    "title":"Tue",
+                    "payload":"Tu"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Wed",
+                    "payload":"W"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Thu",
+                    "payload":"Th"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Fri",
+                    "payload":"F"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Sat",
+                    "payload":"Sa"
+                  }
+                  {
+                    "content_type":"text",
+                    "title":"Sun",
+                    "payload":"Su"
+                  }
+                  ]
+    }
+  }
+  else if (received_message.text == "Mon") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for my customer see you again.',
+    }
+  }  else if (received_message.text == "Tue") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Wed") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Thu") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Fri") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Sat") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+   else if (received_message.text == "Sun") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
    else if (received_message.text == "Home") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -447,6 +838,32 @@ function handlePostback(sender_psid, received_postback) {
                    "template_type": "generic",
                     "elements": [{
                       "title": "The date you will be booking",
+                      "subtitle": "Please please choose booking date",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "During this month",
+                          "payload": "dm",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "During this week",
+                          "payload": "dm",
+                        },
+                      ],
+                    }]
+                  }
+                }
+    }
+  }
+  else if (payload === 'dm') {
+    response = { 
+      "attachment": {
+                  "type": "template",
+                  "payload": {
+                   "template_type": "generic",
+                    "elements": [{
+                      "title": "The date you will be booking",
                       "subtitle": "choose package?",
                       "buttons": [
                         {
@@ -498,21 +915,7 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
-   else if (payload === 'wd') {
-    response = { "text": " choose package price for your choose location",
-                  "quick_replies":[
-                  {
-                    "content_type":"text",
-                    "title":"Home",
-                    "payload":"wd"
-                  },{
-                    "content_type":"text",
-                    "title":"Shop",
-                    "payload":"wd"
-                  }]
-     }
-  }
-  
+   
 
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
