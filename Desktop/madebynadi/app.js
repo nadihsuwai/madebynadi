@@ -38,6 +38,7 @@ app.post('/webhook', (req, res) => {
   // Parse the request body from the POST
    let makebook = {
   bookingdate:false,
+  bdk:false,
   };
   let body = req.body;
 
@@ -135,6 +136,52 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": 'hello! Welcome madebynadi Page.Thank for visiting my page.',
     }
+  }
+  else if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
+    response = {
+      "text": `write the date.`
+    }
+    make.bookingdate = true;
+  }else if (received_message.text && make.bookingdate == true) {   
+    userEnteredmake.bookingdate =  received_message.text;
+    response = {
+      "text": `Please fill the date.`
+    }
+   make.bookingdate = false;
+   make.bdk= true;
+ }
+ else if (received_message.text && make.bdk == true) {
+   userEnteredmake.bdk =  received_message.text;
+    response = { 
+      "attachment": {
+                  "type": "template",
+                  "payload": {
+                   "template_type": "generic",
+                    "elements": [{
+                      "title": "OK",
+                      "subtitle": "Please enter the exactly date",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "wedding",
+                          "payload": "wd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "graduation",
+                          "payload": "wd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "donation",
+                          "payload": "wd",
+                        }
+                      ],
+                    }]
+                  }
+                }
+    }
+    make.bdk= false;
   }
   else if (received_message.text == "Yes!") {    
     // Create the payload for a basic text message, which
@@ -457,18 +504,38 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
     }
-  }else if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
-    response = {
-      "text": `write the date.`
+  }
+ else if (payload === 'cbd') {
+    response = { 
+      "attachment": {
+                  "type": "template",
+                  "payload": {
+                   "template_type": "generic",
+                    "elements": [{
+                      "title": "OK",
+                      "subtitle": "Please enter the exactly date",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "wedding",
+                          "payload": "wd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "graduation",
+                          "payload": "wd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "donation",
+                          "payload": "wd",
+                        }
+                      ],
+                    }]
+                  }
+                }
     }
-    make.bookingdate = true;
-  }else if (received_message.text && make.bookingdate == true) {   
-    userEnteredmake.bookingdate =  received_message.text;
-    response = {
-      "text": `Please fill the date.`
-    }
-   make.bookingdate = false;
- }
+  }
   
   else if (payload === 'cl') {
     response = { "text": "Do you choose the location?",
