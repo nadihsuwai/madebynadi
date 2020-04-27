@@ -561,10 +561,10 @@ function handlePostback(sender_psid, received_postback) {
            {
             "title":"Customer review",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/94378933_141491520749313_6975060191880413184_n.jpg?_nc_cat=103&_nc_sid=8bfeb9&_nc_eui2=AeF-5tUPqCbSpC98jnEqXoUs8EJXlqRb1XrwQleWpFvVekCdbaafeAq9czf3Tcv3A0gjG9pXiu4hXpvwMieh812b&_nc_ohc=O6N9rbwTA_UAX_07Auk&_nc_ht=scontent.fmdl2-1.fna&oh=706434554db1e4e91c8ac89c8bd5fa4f&oe=5ECCB246.jpg",
-            "subtitle":"👰 The estimated price of wedding dress is range from 300000 to above.",
+            "subtitle":"",
             "default_action": {
               "type": "web_url",
-              "url": "https://https://www.facebook.com/Made-by-Nadi-110838683814597.jpg",
+              "url": "https://www.facebook.com/Made-by-Nadi-110838683814597.jpg",
               "webview_height_ratio": "tall",
             },
             "buttons":[
