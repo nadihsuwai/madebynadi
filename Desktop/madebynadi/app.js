@@ -560,7 +560,7 @@ function handlePostback(sender_psid, received_postback) {
                   
      }
   }
-   else if (payload === 'WD') {
+   else if (received_message.text === 'WD') {
     response = {
     "attachment":{
       "type":"template",
