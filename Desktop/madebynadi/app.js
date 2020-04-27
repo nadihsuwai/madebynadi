@@ -502,12 +502,13 @@ function handlePostback(sender_psid, received_postback) {
                     "elements": [{
                       "title": "OK",
                       "subtitle": "Please enter the exactly date",
+                      "payload":"cbd2"
                     }]
                   }
                 }
     }
   }
- else if (payload === 'cbd') {
+ else if (payload === 'cbd2') {
     response = { 
       "attachment": {
                   "type": "template",
@@ -538,21 +539,28 @@ function handlePostback(sender_psid, received_postback) {
                 }
     }
   }
+
   
   else if (payload === 'cl') {
-    response = { "text": "Do you choose the location?",
+    response = { "text": "ok which event of image want to view",
                   "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"home",
-                    "payload":"D"
+                    "title":"Wedding",
+                    "payload":"WD"
                   },{
                     "content_type":"text",
-                    "title":"shop",
-                    "payload":"IWC"
-                  }]
+                    "title":"Graduation",
+                    "payload":"GD"
+                  },
+                  {
+                    "content_type":"text",
+                    "title":"Donation",
+                    "payload":"DN"
+                  }
+                  ]
      }
-  }
+ 
   else if (payload === 'vf') {
     response = { "text": " Can you view my customer feedback?",
                   "quick_replies":[
