@@ -329,7 +329,8 @@ else if (received_message.text == "Order") {
       "text": 'OK. Thank you!',
     }
   }
-  else if (received_message.text == "slide") {
+
+ else if (received_message.text == "slide") {
     response = {
     "attachment":{
       "type":"template",
@@ -404,7 +405,6 @@ else if (received_message.text == "Order") {
     }
   }
   }
-
   else if (received_message.text == "ni hao") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
