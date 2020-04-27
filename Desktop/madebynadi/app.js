@@ -124,7 +124,7 @@ app.get('/webhook', (req, res) => {
 });
 
 function handleMessage(sender_psid, received_message) {
-   var makebook = {
+   var make = {
   bookingdate:false,
   bdk:false,
   };
