@@ -153,12 +153,12 @@ function handleMessage(sender_psid, received_message) {
       "text": 'OK',
     }
   }
-  else if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
+   if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
     response = {
       "text": `write the date.`
     }
     make.bookingdate = true;
-  }else if (received_message.text && make.bookingdate == true) {   
+  } if (received_message.text && make.bookingdate == true) {   
     userEnteredmake.bookingdate =  received_message.text;
     response = {
       "text": `Please fill the date.`
@@ -166,7 +166,7 @@ function handleMessage(sender_psid, received_message) {
    make.bookingdate = false;
    make.bdk= true;
  }
- else if (received_message.text && make.bdk == true) {
+  if (received_message.text && make.bdk == true) {
    userEnteredmake.bdk =  received_message.text;
     response = { 
       "attachment": {
@@ -199,7 +199,7 @@ function handleMessage(sender_psid, received_message) {
     }
     make.bdk= false;
   }
-   else if (received_message.text == "Home") {    
+    if (received_message.text == "Home") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -216,7 +216,7 @@ function handleMessage(sender_psid, received_message) {
                   }]
     }
   }
-  else if (received_message.text == "Order") {    
+   if (received_message.text == "Order") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -233,28 +233,28 @@ function handleMessage(sender_psid, received_message) {
                   }]
     }
   }
-   else if (received_message.text == "Yes") {    
+    if (received_message.text == "Yes") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'Thank for my customer see you again.',
     }
   } 
-   else if (received_message.text == "No") {    
+   if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'Thank for visiting by my page madebynadi.',
     }
   } 
-  else if (received_message.text == "Cancle") {    
+  if (received_message.text == "Cancle") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'Thank for visiting mypage.',
     }
   } 
-   else if (received_message.text == "Shop") {    
+    if (received_message.text == "Shop") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -272,7 +272,7 @@ function handleMessage(sender_psid, received_message) {
 
     }
   }
-else if (received_message.text == "Order") {   
+e if (received_message.text == "Order") {   
 
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -291,20 +291,20 @@ else if (received_message.text == "Order") {
 
     }
   }
-   else if (received_message.text == "Yes") {    
+   if (received_message.text == "Yes") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'Thank for my customer see you again.',
     }
-  }  else if (received_message.text == "No") {    
+  }   if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'Thank for visiting by my page madebynadi.',
     }
   } 
-  else if (received_message.text == "Cancle") {    
+   if (received_message.text == "Cancle") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -313,23 +313,23 @@ else if (received_message.text == "Order") {
   } 
 
   
-  else if (received_message.text == "home") {
+   if (received_message.text == "home") {
     response = {
       "text":'please send me details address'
     }
-  }else if (received_message.text == "shop") {
+  } if (received_message.text == "shop") {
     response = {
       "text": 'building(1315) room(13) is my address ok! see you.'
     }
   }
-  else if (received_message.text == "No") {    
+   if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'OK. Thank you!',
     }
   }
-  else if (received_message.text === 'Wedding') {
+  if (received_message.text === 'Wedding') {
     response = {
     "attachment":{
       "type":"template",
@@ -447,7 +447,7 @@ else if (received_message.text == "Order") {
   }
   }
 
- else if (received_message.text == "slide") {
+  if (received_message.text == "slide") {
     response = {
     "attachment":{
       "type":"template",
@@ -522,20 +522,20 @@ else if (received_message.text == "Order") {
     }
   }
   }
-  else if (received_message.text == "ni hao") {    
+   if (received_message.text == "ni hao") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": `Hao Xie Xie. Ni Hao Mah!`
     }
   }
-   else if (received_message.text) {    
+    if (received_message.text) {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": `You sent the message: "${received_message.text}". Now send me an attachment!`
     }
-  } else if (received_message.attachments) {
+  }  if (received_message.attachments) {
     // Get the URL of the message attachment
     let attachment_url = received_message.attachments[0].payload.url;
     response = {
@@ -564,7 +564,7 @@ else if (received_message.text == "Order") {
       }
     }
   } 
-  else if (received_message.metadata === 'cbd2') {
+   (received_message.metadata === 'cbd2') {
     response = { 
       "attachment": {
                   "type": "template",
