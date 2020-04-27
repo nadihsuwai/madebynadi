@@ -440,27 +440,6 @@ else if (received_message.text == "Order") {
                 "payload":"sc10"
               }              
             ]      
-          },
-           {
-            "title":"",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/94488885_141568420741623_2989696145988517888_n.jpg?_nc_cat=106&_nc_sid=8bfeb9&_nc_eui2=AeELNXrAdj0b4Df-8Oe0V-oDSdtmIMsyTRNJ22YgyzJNE997ANKOy6peZal8eigMz68aX_kAc6G31z1kA3YE3xqD&_nc_ohc=Lp56C4f_yZcAX9m4WoM&_nc_ht=scontent.fmdl2-1.fna&oh=21758b6ab5768492cb7123afe6d984a3&oe=5ECAE3B0",
-            "subtitle":"",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
-              "webview_height_ratio": "tall",
-            },
-            "buttons":[
-              {
-                "type":"web_url",
-                "url":"",
-                "title":""
-              },{
-                "type":"postback",
-                "title":"",
-                "payload":"sc10"
-              }              
-            ]      
           }
         ]
       }
