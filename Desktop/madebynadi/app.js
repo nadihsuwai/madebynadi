@@ -136,18 +136,7 @@ function handleMessage(sender_psid, received_message) {
       "text": 'hello! Welcome madebynadi Page.Thank for visiting my page.',
     }
   }
-   else if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
-    response = {
-      "text": `write the date.`
-    }
-    make.bookingdate = true;
-  }else if (received_message.text && make.bookingdate == true) {   
-    userEnteredmake.bookingdate =  received_message.text;
-    response = {
-      "text": `Please fill the date.`
-    }
-   make.bookingdate = false;
- }
+   
 
   else if (received_message.text == "Yes!") {    
     // Create the payload for a basic text message, which
@@ -471,8 +460,6 @@ function handlePostback(sender_psid, received_postback) {
                 }
     }
   }
- 
-  
   else if (payload === 'cl') {
     response = { "text": "Do you choose the location?",
                   "quick_replies":[
