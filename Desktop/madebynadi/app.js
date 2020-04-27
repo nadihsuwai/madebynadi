@@ -159,7 +159,7 @@ function handleMessage(sender_psid, received_message) {
                    "template_type": "generic",
                     "elements": [{
                       "title": "OK",
-                      "subtitle": "Please enter the exactly date",
+                      "subtitle": "choose package",
                       "buttons": [
                         {
                           "type": "postback",
@@ -183,10 +183,6 @@ function handleMessage(sender_psid, received_message) {
     }
     make.bdk= false;
   }
-
-
-
-  
   else if (received_message.text == "Yes!") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -517,7 +513,7 @@ function handlePostback(sender_psid, received_postback) {
                    "template_type": "generic",
                     "elements": [{
                       "title": "OK",
-                      "subtitle": "Please enter the exactly date",
+                      "subtitle": "Choose package",
                       "buttons": [
                         {
                           "type": "postback",
