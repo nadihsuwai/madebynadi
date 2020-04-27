@@ -290,7 +290,7 @@ else if (received_message.text == "Order") {
                   }]
 
     }
-  }else if (received_message.text === 'WD') {
+  }else if (received_message.text === 'Wedding') {
     response = {
     "attachment":{
       "type":"template",
