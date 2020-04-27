@@ -240,7 +240,6 @@ function handleMessage(sender_psid, received_message) {
       "text": 'Thank for my customer see you again.',
     }
   } 
-  
    else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -561,7 +560,6 @@ function handlePostback(sender_psid, received_postback) {
                   
      }
   }
-
   else if (payload === 'vf') {
     response = { "text": " Can you view my customer feedback?",
                   "quick_replies":[
