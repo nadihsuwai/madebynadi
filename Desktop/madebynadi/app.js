@@ -22,7 +22,10 @@
 
 'use strict';
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
-
+let measurement = {
+  chest:false,
+  upperArm:false,
+  };
 // Imports dependencies and set up http server
 const 
   request = require('request'),
@@ -103,7 +106,7 @@ app.get('/webhook', (req, res) => {
   let token = req.query['hub.verify_token'];
   let challenge = req.query['hub.challenge'];
 
-
+  
     
   // Check if a token and mode were sent
   if (mode && token) {
@@ -134,8 +137,6 @@ function handleMessage(sender_psid, received_message) {
       "text": 'hello! Welcome madebynadi Page.Thank for visiting my page.',
     }
   }
-   
-
   else if (received_message.text == "Yes!") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -458,6 +459,7 @@ function handlePostback(sender_psid, received_postback) {
                 }
     }
   }
+  
   else if (payload === 'cl') {
     response = { "text": "Do you choose the location?",
                   "quick_replies":[
