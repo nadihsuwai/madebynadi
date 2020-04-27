@@ -564,7 +564,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   } 
-   if (received_message.metadata === 'cbd2') {
+   if(received_message.metadata === 'cbd2') {
     response = { 
       "attachment": {
                   "type": "template",
@@ -644,7 +644,7 @@ function handlePostback(sender_psid, received_postback) {
   else if (payload === 'cbd') {
     response = { 
       "text":"Please enter the exactly date", 
-     "metadata" : "cbd2"
+      "metadata" : "cbd2"
   }
 }
 
