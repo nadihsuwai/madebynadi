@@ -557,10 +557,10 @@ function handlePostback(sender_psid, received_postback) {
                     "content_type":"text",
                     "title":"Donation",
                     "payload":"DN"
-                  }
-                  ]
+                  }]
+                  
      }
-   
+   }
   else if (payload === 'vf') {
     response = { "text": " Can you view my customer feedback?",
                   "quick_replies":[
