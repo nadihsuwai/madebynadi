@@ -49,7 +49,7 @@ app.post('/webhook', (req, res) => {
 
       // Gets the body of the webhook event
       let webhook_event = entry.messaging[0];
-      console.log(webhook_event);
+      console.log("webhook_event:" ,webhook_event);
 
 
       // Get the sender PSID
@@ -138,6 +138,38 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": 'hello! Welcome madebynadi Page.Thank for visiting my page.',
     }
+  }
+  if(received_message.metadata === 'cbd2') {
+    response = { 
+      "attachment": {
+                  "type": "template",
+                  "payload": {
+                   "template_type": "generic",
+                    "elements": [{
+                      "title": "OK",
+                      "subtitle": "Please enter the exactly date",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "wedding",
+                          "payload": "wd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "graduation",
+                          "payload": "wd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "donation",
+                          "payload": "wd",
+                        }
+                      ]
+                    }]
+                  }
+                }
+    }
+
   }
    if (received_message.text == "Yes!") {    
     // Create the payload for a basic text message, which
@@ -564,38 +596,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   } 
-   if(received_message.metadata === 'cbd2') {
-    response = { 
-      "attachment": {
-                  "type": "template",
-                  "payload": {
-                   "template_type": "generic",
-                    "elements": [{
-                      "title": "OK",
-                      "subtitle": "Please enter the exactly date",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "wedding",
-                          "payload": "wd",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "graduation",
-                          "payload": "wd",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "donation",
-                          "payload": "wd",
-                        }
-                      ]
-                    }]
-                  }
-                }
-    }
-
-  }
+   
   // Send the response message
   callSendAPI(sender_psid, response);    
 }
