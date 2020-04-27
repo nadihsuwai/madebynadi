@@ -22,9 +22,7 @@
 
 'use strict';
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
-let measurement = {
-  bookingdate:false,
-  };
+
 // Imports dependencies and set up http server
 const 
   request = require('request'),
@@ -105,7 +103,9 @@ app.get('/webhook', (req, res) => {
   let token = req.query['hub.verify_token'];
   let challenge = req.query['hub.challenge'];
 
-  
+  let measurement = {
+  bookingdate:false,
+  };
     
   // Check if a token and mode were sent
   if (mode && token) {
