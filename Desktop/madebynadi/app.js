@@ -459,9 +459,9 @@ function handlePostback(sender_psid, received_postback) {
                 }
     }
   }
-  else if (received_message.text == "Start" || received_message.text == "start") {    
+  else if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
     response = {
-      "text": `Please write the exactly date for booking.`
+      "text": `write the date.`
     }
     make.bookingdate = true;
   }else if (received_message.text && make.bookingdate == true) {   
