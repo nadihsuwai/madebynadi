@@ -454,7 +454,7 @@ function handleMessage(sender_psid, received_message) {
           },
           {
             "title":"wedding photo",
-            "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/94429932_141568397408292_70215723082842112_n.jpg?_nc_cat=102&_nc_sid=8bfeb9&_nc_eui2=AeE4_dclMP_cLaVHdUNKWMcONM9RXVHjal00z1FdUeNqXQGPd9gKsRVUYQB5qbaRgzteOpww4a2oKK2G3ANG2yUt&_nc_ohc=omhBj3hQiKEAX9EnwMM&_nc_ht=scontent.fmdl2-2.fna&oh=12c678780f6a10974ce9911e1867a3bb&oe=5ECD73F1",
+            "image_url":"https://i.imgur.com/1xhM25m.jpg",
             "subtitle":"wedding photo",
             "default_action": {
               "type": "web_url",
