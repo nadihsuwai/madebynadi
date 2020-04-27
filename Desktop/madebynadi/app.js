@@ -585,7 +585,38 @@ else if (received_message.text == "Order") {
       }
     }
   } 
-  
+  else if (received_message.metadata === 'cbd2') {
+    response = { 
+      "attachment": {
+                  "type": "template",
+                  "payload": {
+                   "template_type": "generic",
+                    "elements": [{
+                      "title": "OK",
+                      "subtitle": "Please enter the exactly date",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "wedding",
+                          "payload": "wd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "graduation",
+                          "payload": "wd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "donation",
+                          "payload": "wd",
+                        }
+                      ]
+                    }]
+                  }
+                }
+    }
+
+  }
   // Send the response message
   callSendAPI(sender_psid, response);    
 }
@@ -633,19 +664,11 @@ function handlePostback(sender_psid, received_postback) {
   }
   else if (payload === 'cbd') {
     response = { 
-      "attachment": {
-                  "type": "template",
-                  "payload": {
-                   "template_type": "generic",
-                    "elements": [{
-                      "title": "OK",
-                      "subtitle": "Please enter the exactly date",
-                      "payload":"cbd2"
-                    }]
-                  }
-                }
-    }
+      "text":"Please enter the exactly date", 
+      "meta data" : "cbd2"
   }
+}
+
  else if (payload === 'cbd2') {
     response = { 
       "attachment": {
@@ -699,7 +722,7 @@ function handlePostback(sender_psid, received_postback) {
      }
   }
   else if (payload === 'vf') {
-    response = { "text": " Can you view my customer feedback?",
+    response = { "text": "All of my feedback are following",
                   "quick_replies":[
                   {
                     "content_type":"text",
