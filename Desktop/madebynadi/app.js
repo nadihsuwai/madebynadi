@@ -644,7 +644,7 @@ function handlePostback(sender_psid, received_postback) {
   else if (payload === 'cbd') {
     response = { 
       "text":"Please enter the exactly date", 
-     //"meta data" : "cbd2"
+     //"metadata" : "cbd2"
   }
 }
 
