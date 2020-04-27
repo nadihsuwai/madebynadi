@@ -329,7 +329,7 @@ else if (received_message.text == "Order") {
       "text": 'OK. Thank you!',
     }
   }
-   else if (received_message.text === 'WD') {
+   else if (received_message.text === 'Wedding') {
     response = {
     "attachment":{
       "type":"template",
