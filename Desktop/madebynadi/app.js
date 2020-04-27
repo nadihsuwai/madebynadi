@@ -124,11 +124,12 @@ app.get('/webhook', (req, res) => {
 });
 
 function handleMessage(sender_psid, received_message) {
-  let response;
    let makebook = {
   bookingdate:false,
   bdk:false,
   };
+  let response;
+
   
   // Checks if the message contains text
   if (received_message.text == "hi") {    
