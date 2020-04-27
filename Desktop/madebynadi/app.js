@@ -564,7 +564,7 @@ function handlePostback(sender_psid, received_postback) {
             "subtitle":"👰 The estimated price of wedding dress is range from 300000 to above.",
             "default_action": {
               "type": "web_url",
-              "url": "https://i.pinimg.com/236x/e6/77/cc/e677cc25d57a184fc8928a001f5f25c2--traditional-wedding-dresses-traditional-outfits.jpg",
+              "url": "https://https://www.facebook.com/Made-by-Nadi-110838683814597.jpg",
               "webview_height_ratio": "tall",
             },
             "buttons":[
