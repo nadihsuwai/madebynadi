@@ -22,10 +22,6 @@
 
 'use strict';
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
-let measurement = {
-  chest:false,
-  upperArm:false,
-  };
 // Imports dependencies and set up http server
 const 
   request = require('request'),
@@ -40,6 +36,9 @@ app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 app.post('/webhook', (req, res) => {  
 
   // Parse the request body from the POST
+   let makebook = {
+  bookingdate:false,
+  };
   let body = req.body;
 
 
@@ -458,7 +457,18 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
     }
-  }
+  }else if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
+    response = {
+      "text": `write the date.`
+    }
+    make.bookingdate = true;
+  }else if (received_message.text && make.bookingdate == true) {   
+    userEnteredmake.bookingdate =  received_message.text;
+    response = {
+      "text": `Please fill the date.`
+    }
+   make.bookingdate = false;
+ }
   
   else if (payload === 'cl') {
     response = { "text": "Do you choose the location?",
