@@ -552,29 +552,21 @@ function handlePostback(sender_psid, received_postback) {
      }
   }
   else if (payload === 'vf') {
-    response =  {
-       "attachment":{
+    response =  response = {
+    "attachment":{
       "type":"template",
       "payload":{
         "template_type":"generic",
         "elements":[
            {
-            "title":"Customer review",
-            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/94378933_141491520749313_6975060191880413184_n.jpg?_nc_cat=103&_nc_sid=8bfeb9&_nc_eui2=AeF-5tUPqCbSpC98jnEqXoUs8EJXlqRb1XrwQleWpFvVekCdbaafeAq9czf3Tcv3A0gjG9pXiu4hXpvwMieh812b&_nc_ohc=O6N9rbwTA_UAX_07Auk&_nc_ht=scontent.fmdl2-1.fna&oh=706434554db1e4e91c8ac89c8bd5fa4f&oe=5ECCB246.jpg",
-            "subtitle":"",
+            "title":"All of my customer review",
+            "image_url":"https://www.facebook.com/photo/?fbid=141491517415980&set=pcb.141491657415966&__cft__[0]=AZVcci6ssMLuayNV77M6nwobCuXUvex4OnLc_c1xbRcrA8TyyHKZ6DQjv-XbUyhlb1QitK3T8Ut2hQcHOXe3OMMXvnLRxu-45xS6mNMUbN9kpgYFInjFsCs0uvn5XXCH_5kUjYkAWtw7WjPW9h6LJzi-8GJvsJsUxnCuvulkI1VzCQ&__tn__=*bH-R.png",
+            "subtitle":"We have the right hat for everyone.",
             "default_action": {
               "type": "web_url",
-              "url": "https://www.facebook.com/Made-by-Nadi-110838683814597.jpg",
+              "url": "https://www.facebook.com/Made-by-Nadi-110838683814597",
               "webview_height_ratio": "tall",
             },
-            "buttons":[
-             {
-                "type":"postback",
-                "title":"review",
-                "payload":"review"
-              }              
-            ]      
-          },
    else if (payload === 'wd') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
