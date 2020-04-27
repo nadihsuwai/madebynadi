@@ -137,52 +137,6 @@ function handleMessage(sender_psid, received_message) {
       "text": 'hello! Welcome madebynadi Page.Thank for visiting my page.',
     }
   }
-  else if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
-    response = {
-      "text": `write the date.`
-    }
-    make.bookingdate = true;
-  }else if (received_message.text && make.bookingdate == true) {   
-    userEnteredmake.bookingdate =  received_message.text;
-    response = {
-      "text": `Please fill the date.`
-    }
-   make.bookingdate = false;
-   make.bdk= true;
- }
- else if (received_message.text && make.bdk == true) {
-   userEnteredmake.bdk =  received_message.text;
-    response = { 
-      "attachment": {
-                  "type": "template",
-                  "payload": {
-                   "template_type": "generic",
-                    "elements": [{
-                      "title": "OK",
-                      "subtitle": "choose package",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "wedding",
-                          "payload": "wd",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "graduation",
-                          "payload": "wd",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "donation",
-                          "payload": "wd",
-                        }
-                      ],
-                    }]
-                  }
-                }
-    }
-    make.bdk= false;
-  }
   else if (received_message.text == "Yes!") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -504,6 +458,51 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
     }
+  }else if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
+    response = {
+      "text": `write the date.`
+    }
+    make.bookingdate = true;
+  }else if (received_message.text && make.bookingdate == true) {   
+    userEnteredmake.bookingdate =  received_message.text;
+    response = {
+      "text": `Please fill the date.`
+    }
+   make.bookingdate = false;
+   make.bdk= true;
+ }
+ else if (received_message.text && make.bdk == true) {
+   userEnteredmake.bdk =  received_message.text;
+    response = { 
+      "attachment": {
+                  "type": "template",
+                  "payload": {
+                   "template_type": "generic",
+                    "elements": [{
+                      "title": "OK",
+                      "subtitle": "Please enter the exactly date",
+                      "buttons": [
+                        {
+                          "type": "postback",
+                          "title": "wedding",
+                          "payload": "wd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "graduation",
+                          "payload": "wd",
+                        },
+                        {
+                          "type": "postback",
+                          "title": "donation",
+                          "payload": "wd",
+                        }
+                      ],
+                    }]
+                  }
+                }
+    }
+    make.bdk= false;
   }
  else if (payload === 'cbd') {
     response = { 
@@ -513,7 +512,7 @@ function handlePostback(sender_psid, received_postback) {
                    "template_type": "generic",
                     "elements": [{
                       "title": "OK",
-                      "subtitle": "Choose package",
+                      "subtitle": "Please enter the exactly date",
                       "buttons": [
                         {
                           "type": "postback",
@@ -552,21 +551,19 @@ function handlePostback(sender_psid, received_postback) {
      }
   }
   else if (payload === 'vf') {
-    response =  response = {
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements":[
-           {
-            "title":"All of my customer review",
-            "image_url":"https://www.facebook.com/photo/?fbid=141491517415980&set=pcb.141491657415966&__cft__[0]=AZVcci6ssMLuayNV77M6nwobCuXUvex4OnLc_c1xbRcrA8TyyHKZ6DQjv-XbUyhlb1QitK3T8Ut2hQcHOXe3OMMXvnLRxu-45xS6mNMUbN9kpgYFInjFsCs0uvn5XXCH_5kUjYkAWtw7WjPW9h6LJzi-8GJvsJsUxnCuvulkI1VzCQ&__tn__=*bH-R.png",
-            "subtitle":"We have the right hat for everyone.",
-            "default_action": {
-              "type": "web_url",
-              "url": "https://www.facebook.com/Made-by-Nadi-110838683814597",
-              "webview_height_ratio": "tall",
-            },
+    response = { "text": " Can you view my customer feedback?",
+                  "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Yes!",
+                    "payload":"D"
+                  },{
+                    "content_type":"text",
+                    "title":"No!",
+                    "payload":"IWC"
+                  }]
+     }
+  }
    else if (payload === 'wd') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
