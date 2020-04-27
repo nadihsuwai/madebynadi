@@ -555,7 +555,7 @@ function handlePostback(sender_psid, received_postback) {
                   },{
                     "content_type":"text",
                     "title":"Donation",
-                    "payload":"WD"
+                    "payload":"DA"
                   }]
                   
      }
