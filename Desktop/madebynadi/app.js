@@ -103,9 +103,7 @@ app.get('/webhook', (req, res) => {
   let token = req.query['hub.verify_token'];
   let challenge = req.query['hub.challenge'];
 
-  let measurement = {
-  bookingdate:false,
-  };
+
     
   // Check if a token and mode were sent
   if (mode && token) {
