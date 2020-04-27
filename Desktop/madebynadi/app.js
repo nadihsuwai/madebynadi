@@ -552,19 +552,29 @@ function handlePostback(sender_psid, received_postback) {
      }
   }
   else if (payload === 'vf') {
-    response = { "text": " Can you view my customer feedback?",
-                  "quick_replies":[
-                  {
-                    "content_type":"text",
-                    "title":"Yes!",
-                    "payload":"D"
-                  },{
-                    "content_type":"text",
-                    "title":"No!",
-                    "payload":"IWC"
-                  }]
-     }
-  }
+    response =  {
+       "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements":[
+           {
+            "title":"Customer review",
+            "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/94378933_141491520749313_6975060191880413184_n.jpg?_nc_cat=103&_nc_sid=8bfeb9&_nc_eui2=AeF-5tUPqCbSpC98jnEqXoUs8EJXlqRb1XrwQleWpFvVekCdbaafeAq9czf3Tcv3A0gjG9pXiu4hXpvwMieh812b&_nc_ohc=O6N9rbwTA_UAX_07Auk&_nc_ht=scontent.fmdl2-1.fna&oh=706434554db1e4e91c8ac89c8bd5fa4f&oe=5ECCB246.jpg",
+            "subtitle":"👰 The estimated price of wedding dress is range from 300000 to above.",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://i.pinimg.com/236x/e6/77/cc/e677cc25d57a184fc8928a001f5f25c2--traditional-wedding-dresses-traditional-outfits.jpg",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+             {
+                "type":"postback",
+                "title":"review",
+                "payload":"review"
+              }              
+            ]      
+          },
    else if (payload === 'wd') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
