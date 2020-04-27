@@ -22,6 +22,10 @@
 
 'use strict';
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
+let measurement = {
+  chest:false,
+  upperArm:false,
+  };
 // Imports dependencies and set up http server
 const 
   request = require('request'),
@@ -37,6 +41,7 @@ app.post('/webhook', (req, res) => {
 
   // Parse the request body from the POST
   let body = req.body;
+
 
   
 
@@ -439,7 +444,8 @@ function handlePostback(sender_psid, received_postback) {
                   }
                 }
     }
-  }else if (payload === 'cbd') {
+  }
+  else if (payload === 'cbd') {
     response = { 
       "attachment": {
                   "type": "template",
@@ -447,29 +453,13 @@ function handlePostback(sender_psid, received_postback) {
                    "template_type": "generic",
                     "elements": [{
                       "title": "OK",
-                      "subtitle": "choose package?",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "wedding",
-                          "payload": "wd",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "graduation",
-                          "payload": "wd",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "donation",
-                          "payload": "wd",
-                        }
-                      ],
+                      "subtitle": "Please enter the exactly date",
                     }]
                   }
                 }
     }
   }
+  
   else if (payload === 'cl') {
     response = { "text": "Do you choose the location?",
                   "quick_replies":[
