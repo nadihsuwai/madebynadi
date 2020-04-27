@@ -136,17 +136,7 @@ function handleMessage(sender_psid, received_message) {
       "text": 'hello! Welcome madebynadi Page.Thank for visiting my page.',
     }
   }
-  else if (received_message.text == "Start" || received_message.text == "start") {    
-    response = {
-      "text": `Please write the exactly date for booking.`
-    }
-    make.bookingdate = true;
-  }else if (received_message.text && make.bookingdate == true) {   
-    userEnteredmake.bookingdate =  received_message.text;
-    response = {
-      "text": `Please fill the date.`
-    }
-   make.bookingdate = false;
+
   else if (received_message.text == "Yes!") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -469,6 +459,18 @@ function handlePostback(sender_psid, received_postback) {
                 }
     }
   }
+  else if (received_message.text == "Start" || received_message.text == "start") {    
+    response = {
+      "text": `Please write the exactly date for booking.`
+    }
+    make.bookingdate = true;
+  }else if (received_message.text && make.bookingdate == true) {   
+    userEnteredmake.bookingdate =  received_message.text;
+    response = {
+      "text": `Please fill the date.`
+    }
+   make.bookingdate = false;
+ }
   
   else if (payload === 'cl') {
     response = { "text": "Do you choose the location?",
