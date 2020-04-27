@@ -564,7 +564,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
   } 
-   if(received_message.metadata === 'cbd2') {
+   if (received_message.metadata === 'cbd2') {
     response = { 
       "attachment": {
                   "type": "template",
