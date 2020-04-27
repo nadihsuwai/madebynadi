@@ -533,7 +533,7 @@ function handlePostback(sender_psid, received_postback) {
                           "title": "donation",
                           "payload": "wd",
                         }
-                      ],
+                      ]
                     }]
                   }
                 }
@@ -541,8 +541,8 @@ function handlePostback(sender_psid, received_postback) {
   }
 
   
-  else if (payload === 'cl') {
-    response = { "text": "ok which event of image want to view",
+ else if (payload === 'cl') {
+    response = { "text": " ok which event of image want to view",
                   "quick_replies":[
                   {
                     "content_type":"text",
@@ -552,15 +552,14 @@ function handlePostback(sender_psid, received_postback) {
                     "content_type":"text",
                     "title":"Graduation",
                     "payload":"GD"
-                  },
-                  {
+                  },{
                     "content_type":"text",
                     "title":"Donation",
-                    "payload":"DN"
+                    "payload":"DA"
                   }]
                   
      }
-   }
+  }
   else if (payload === 'vf') {
     response = { "text": " Can you view my customer feedback?",
                   "quick_replies":[
