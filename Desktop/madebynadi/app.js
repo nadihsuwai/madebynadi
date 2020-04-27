@@ -452,7 +452,7 @@ function handlePostback(sender_psid, received_postback) {
                   "payload": {
                    "template_type": "generic",
                     "elements": [{
-                      "title": "Thank for customer",
+                      "title": "OK",
                       "subtitle": "Please enter the exactly date",
                     }]
                   }
