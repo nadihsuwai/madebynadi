@@ -313,7 +313,7 @@ else if (received_message.text == "Order") {
                 "title":""
               }            
             ]      
-          },
+          }
            {
             "title":"",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-0/s600x600/94335130_141568377408294_6689828793823002624_n.jpg?_nc_cat=100&_nc_sid=8bfeb9&_nc_eui2=AeGzzUthzEUPQ4_8r0-jJ6ZQFXof09ZS_zYVeh_T1lL_Nib5JttX8K93210rOHTNKKVmki7zX7D08ey4_pGTDIFz&_nc_ohc=q_AHGKhdRkMAX8Aiczj&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=7&oh=b6ec042734345691b0d96bcd0a231144&oe=5ECA9DAC",
@@ -330,7 +330,7 @@ else if (received_message.text == "Order") {
                 "title":""
               }             
             ]      
-          },
+          }
            {
             "title":"",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-0/p370x247/94335096_141568460741619_8633813386645209088_n.jpg?_nc_cat=110&_nc_sid=8bfeb9&_nc_eui2=AeFQqOBcfM49cO9Sggxav1ASq9ppN_Sw85Sr2mk39LDzlH23S50SC6mlziL8IVRntHt8_py0Ooe9_bERX3GmNN36&_nc_ohc=QoooDhVBRyAAX9qmKWQ&_nc_ht=scontent.fmdl2-2.fna&_nc_tp=6&oh=5f0a25e814fbb069a8c43f30e8d8f2f5&oe=5ECE2F0A",
@@ -347,7 +347,7 @@ else if (received_message.text == "Order") {
                 "title":""
               }            
             ]      
-          },
+          }
           {
             "title":"",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-0/s600x600/94488517_141568440741621_5149587525009932288_n.jpg?_nc_cat=100&_nc_sid=8bfeb9&_nc_eui2=AeF88u_6x7DXlw4lG_Q4p5zWvnHc__JR8ue-cdz_8lHy50r4QIyKxsQKZVmGbw7uefqpJX7uvYuZJecng2AyQTnn&_nc_ohc=CwOWQspYpGAAX9r5Ben&_nc_ht=scontent.fmdl2-1.fna&_nc_tp=7&oh=2bcdf84c515b796d214e86519fbc6ec6&oe=5ECD689B",
@@ -364,7 +364,7 @@ else if (received_message.text == "Order") {
                 "title":""
               }             
             ]      
-          },
+          }
           {
             "title":"",
             "image_url":"https://scontent.fmdl2-2.fna.fbcdn.net/v/t1.0-9/94429932_141568397408292_70215723082842112_n.jpg?_nc_cat=102&_nc_sid=8bfeb9&_nc_eui2=AeE4_dclMP_cLaVHdUNKWMcONM9RXVHjal00z1FdUeNqXQGPd9gKsRVUYQB5qbaRgzteOpww4a2oKK2G3ANG2yUt&_nc_ohc=omhBj3hQiKEAX9EnwMM&_nc_ht=scontent.fmdl2-2.fna&oh=12c678780f6a10974ce9911e1867a3bb&oe=5ECD73F1",
@@ -381,7 +381,7 @@ else if (received_message.text == "Order") {
                 "title":""
               }            
             ]      
-          },
+          }
           {
             "title":"",
             "image_url":"https://scontent.fmdl2-1.fna.fbcdn.net/v/t1.0-9/94488885_141568420741623_2989696145988517888_n.jpg?_nc_cat=106&_nc_sid=8bfeb9&_nc_eui2=AeELNXrAdj0b4Df-8Oe0V-oDSdtmIMsyTRNJ22YgyzJNE997ANKOy6peZal8eigMz68aX_kAc6G31z1kA3YE3xqD&_nc_ohc=Lp56C4f_yZcAX9m4WoM&_nc_ht=scontent.fmdl2-1.fna&oh=21758b6ab5768492cb7123afe6d984a3&oe=5ECAE3B0",
@@ -398,7 +398,7 @@ else if (received_message.text == "Order") {
                 "title":""
               }            
             ]      
-          },
+          }
         ]
       }
     }
