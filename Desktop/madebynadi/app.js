@@ -677,11 +677,11 @@ else if (received_message.text == "Make Book") {
                   {
                     "content_type":"text",
                     "title":"Yes",
-                    "payload":"D"
+                    "payload":"W"
                   },{
                     "content_type":"text",
                     "title":"No",
-                    "payload":"IWC"
+                    "payload":"Y"
                   }]
 
     }
@@ -804,11 +804,11 @@ else if (received_message.text == "Make Book") {
                   {
                     "content_type":"text",
                     "title":"Yes",
-                    "payload":"D"
+                    "payload":"W"
                   },{
                     "content_type":"text",
                     "title":"No",
-                    "payload":"IWC"
+                    "payload":"Y"
                   }]
 
     }
