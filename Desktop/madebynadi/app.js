@@ -578,7 +578,7 @@ make.bookingdate=false;
     }
     make.bdk= false;
   }
- else   if (received_message.text == "Home") {    
+ else   if (received_message.text == "customer home") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -586,16 +586,16 @@ make.bookingdate=false;
        "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"Order",
+                    "title":"Make book",
                     "payload":"D"
                   },{
                     "content_type":"text",
-                    "title":"Cancle",
+                    "title":"Cancel",
                     "payload":"IWC"
                   }]
     }
   }
- else  if (received_message.text == "Order") {    
+ else  if (received_message.text == "Make book") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -616,24 +616,24 @@ make.bookingdate=false;
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for my customer see you again.',
+      "text": 'Thank for choosing me and trust me, if you have a chance let me see you again.',
     }
   } 
  else  if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for visiting by my page madebynadi.',
+   "text": 'Thank for visiting by my page and if you interest my work please contact me everytime.',
     }
   } 
- else if (received_message.text == "Cancle") {    
+ else if (received_message.text == "Cancel") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for visiting mypage.',
+      "text": 'Thank for visiting and interesting mypage.',
     }
   } 
-   else if (received_message.text == "Shop") {    
+   else if (received_message.text == "makeup artist home") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -641,18 +641,18 @@ make.bookingdate=false;
       "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"Order",
+                    "title":"Make book",
                     "payload":"D"
                   },{
                     "content_type":"text",
-                    "title":"Cancle",
+                    "title":"Cancel",
                     "payload":"IWC"
                   }]
 
     }
   }
 
-else if (received_message.text == "Order") {   
+else if (received_message.text == "Make order") {   
 
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -675,29 +675,29 @@ else   if (received_message.text == "Yes") {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for my customer see you again.',
+      "text": 'Thank for choosing me and trust me, if you have a chance let me see you again.',
     }
   }  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for visiting by my page madebynadi.',
+      "text": 'Thank for visiting by my page and if you interest my work please contact me everytime.',
     }
   } 
-  else if (received_message.text == "Cancle") {    
+  else if (received_message.text == "Cancel") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for visiting mypage.',
+      "text": 'Thank for visiting and interesting mypage.',
     }
   } 
 
   
- else  if (received_message.text == "home") {
+ else  if (received_message.text == "customer home") {
     response = {
       "text":'please send me details address'
     }
-  }else if (received_message.text == "shop") {
+  }else if (received_message.text == "makeup artist home") {
     response = {
       "text": 'building(1315) room(13) is my address ok! see you.'
     }
@@ -986,11 +986,11 @@ function handlePostback(sender_psid, received_postback) {
                   "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"Home",
+                    "title":"makeup artist home",
                     "payload":"wd"
                   },{
                     "content_type":"text",
-                    "title":"Shop",
+                    "title":"customer home",
                     "payload":"wd"
                   }]
      }
