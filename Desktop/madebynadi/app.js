@@ -192,10 +192,6 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc12"
               }              
             ]      
           },
@@ -213,11 +209,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc12"
-              }              
+              }            
             ]      
           },
           {
@@ -234,11 +226,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc12"
-              }              
+              }             
             ]      
           },
           {
@@ -255,10 +243,6 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc12"
               }              
             ]      
           },
@@ -276,10 +260,6 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc12"
               }              
             ]      
           },
@@ -297,11 +277,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc12"
-              }              
+              }             
             ]      
           }
         ]
@@ -330,11 +306,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc14"
-              }              
+              }             
             ]      
           },
           {
@@ -351,11 +323,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc14"
-              }              
+              }             
             ]      
           },
           {
@@ -372,11 +340,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc14"
-              }              
+              }             
             ]      
           },
           {
@@ -393,11 +357,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc14"
-              }              
+              }            
             ]      
           },
           {
@@ -414,11 +374,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc14"
-              }              
+              }             
             ]      
           },
           {
@@ -435,11 +391,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc14"
-              }              
+              }            
             ]      
           }
         ]
@@ -477,7 +429,7 @@ function handleMessage(sender_psid, received_message) {
           },
           {
             "title":"Customer sample photo",
-            "image_url":"https://i.imgur.com/gUGy90c.jpg",
+            "image_url":"https://i.imgur.com/gUGy90c.jpg?1",
             "subtitle":"graduation",
             "default_action": {
               "type": "web_url",
