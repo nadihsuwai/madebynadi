@@ -677,11 +677,11 @@ else if (received_message.text == "Make Book") {
                   {
                     "content_type":"text",
                     "title":"Yes",
-                    "payload":"rr"
+                    "payload":"D"
                   },{
                     "content_type":"text",
                     "title":"No",
-                    "payload":"bb"
+                    "payload":"IWC"
                   }]
 
     }
@@ -784,11 +784,11 @@ else   if (received_message.text == "Customer Home") {
                   {
                     "content_type":"text",
                     "title":"Make Book",
-                    "payload":"rr"
+                    "payload":"D"
                   },{
                     "content_type":"text",
                     "title":"Cancel",
-                    "payload":"bb"
+                    "payload":"IWC"
                   }]
 
     }
@@ -835,7 +835,13 @@ else   if (received_message.text == "Yes") {
   } 
 
 
-
+else if (received_message.text == "No") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'OK. Thank you!',
+    }
+  }
    
   
 
