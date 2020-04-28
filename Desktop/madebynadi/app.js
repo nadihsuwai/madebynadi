@@ -472,10 +472,6 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc13"
               }              
             ]      
           },
@@ -493,11 +489,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc13"
-              }              
+              }             
             ]      
           },
           {
@@ -514,11 +506,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc13"
-              }              
+              }           
             ]      
           },
           {
@@ -535,11 +523,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc13"
-              }              
+              }            
             ]      
           },
           {
@@ -556,11 +540,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc13"
-              }              
+              }            
             ]      
           },
           {
@@ -577,11 +557,7 @@ function handleMessage(sender_psid, received_message) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc13"
-              }              
+              }            
             ]      
           }
         ]
