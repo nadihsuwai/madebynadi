@@ -577,6 +577,7 @@ make.bookingdate=false;
     }
     make.bdk= false;
   }
+
  else   if (received_message.text == "Customer Home") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -615,14 +616,14 @@ make.bookingdate=false;
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for my customer see you again.',
+      "text": 'please send me details address',
     }
   } 
  else  if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for visiting by my page madebynadi.',
+      "text": 'Thank for visiting my page if u intetest of my work can u contact me.',
     }
   } 
  else if (received_message.text == "Cancle") {    
@@ -692,11 +693,7 @@ else   if (received_message.text == "Yes") {
   } 
 
   
- else  if (received_message.text == "home") {
-    response = {
-      "text":'please send me details address'
-    }
-  }else if (received_message.text == "shop") {
+ else if (received_message.text == "shop") {
     response = {
       "text": 'building(1315) room(13) is my address ok! see you.'
     }
@@ -975,12 +972,29 @@ function handlePostback(sender_psid, received_postback) {
   }
 }
 
+ else if (payload === 'wd') {
+    response = { "text": " choose time",
+                  "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"It's 4 hr",
+                    "payload":"gg"
+                  },{
+                    "content_type":"text",
+                    "title":"It's 5 hr",
+                    "payload":"gg"
+                  },{
+                    "content_type":"text",
+                    "title":"It's 6 hr",
+                    "payload":"gg"
+                  }
+                  ]
+     }
+  }
 
 
 
-
-
-   else if (payload === 'wd') {
+ else if (payload === 'gg') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
                   {
@@ -994,6 +1008,8 @@ function handlePostback(sender_psid, received_postback) {
                   }]
      }
   }
+
+  
   
 
   // Send the message to acknowledge the postback
