@@ -729,6 +729,111 @@ function handlePostback(sender_psid, received_postback) {
               }              
             ]      
           }
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/bKvmY8y.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc11"
+              }              
+            ]      
+          }
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/Qfij8Dy.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc11"
+              }              
+            ]      
+          }
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/24kKTQF.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc11"
+              }              
+            ]      
+          }
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/2f8azjC.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc11"
+              }              
+            ]      
+          }
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/kX1qZdV.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc11"
+              }              
+            ]      
+          }
         ]
       }
     }
