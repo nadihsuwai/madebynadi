@@ -605,7 +605,7 @@ else if (received_message.text=== 'It is 4 hr') {
                     "payload":"D"
                   },{
                     "content_type":"text",
-                    "title":"Cancle",
+                    "title":"Cancel",
                     "payload":"IWC"
                   }]
     }
@@ -641,11 +641,11 @@ else if (received_message.text=== 'It is 4 hr') {
       "text": 'Thank for visiting my page if u intetest of my work can u contact me.',
     }
   } 
- else if (received_message.text == "Cancle") {    
+ else if (received_message.text == "Cancel") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for visiting mypage.',
+      "text": 'Thank for visiting and interesting mypage.',
     }
   } 
    else if (received_message.text == "Shop") {    
@@ -660,7 +660,7 @@ else if (received_message.text=== 'It is 4 hr') {
                     "payload":"D"
                   },{
                     "content_type":"text",
-                    "title":"Cancle",
+                    "title":"Cancel",
                     "payload":"IWC"
                   }]
 
@@ -690,20 +690,20 @@ else   if (received_message.text == "Yes") {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for my customer see you again.',
+      "text": 'building(1315) room(13) is my address thank you choose and trust me ok! see you..',
     }
   }  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for visiting by my page madebynadi.',
+      "text": 'Thank for visiting and interesting my page madebynadi.',
     }
   } 
-  else if (received_message.text == "Cancle") {    
+  else if (received_message.text == "Cancel") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for visiting mypage.',
+      "text": 'Thank for visiting and interesting mypage.',
     }
   } 
 else if (received_message.text=== 'It is 5 hr') {
@@ -732,7 +732,7 @@ else   if (received_message.text == "Customer Home") {
                     "payload":"D"
                   },{
                     "content_type":"text",
-                    "title":"Cancle",
+                    "title":"Cancel",
                     "payload":"IWC"
                   }]
     }
@@ -768,11 +768,11 @@ else   if (received_message.text == "Customer Home") {
       "text": 'Thank for visiting my page if u intetest of my work can u contact me.',
     }
   } 
- else if (received_message.text == "Cancle") {    
+ else if (received_message.text == "Cancel") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for visiting mypage.',
+      "text": 'Thank for visiting and interesting mypage .',
     }
   } 
    else if (received_message.text == "Shop") {    
@@ -787,7 +787,7 @@ else   if (received_message.text == "Customer Home") {
                     "payload":"D"
                   },{
                     "content_type":"text",
-                    "title":"Cancle",
+                    "title":"Cancel",
                     "payload":"IWC"
                   }]
 
@@ -817,42 +817,25 @@ else   if (received_message.text == "Yes") {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for my customer see you again.',
+      "text": 'building(1315) room(13) is my address thank you choose and trust me ok! see you..',
     }
   }  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for visiting by my page madebynadi.',
+      "text": 'Thank for visiting and interesting by my page madebynadi.',
     }
   } 
-  else if (received_message.text == "Cancle") {    
+  else if (received_message.text == "Cancel") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Thank for visiting mypage.',
+      "text": 'Thank for visiting and interesting mypage.',
     }
   } 
 
 
 
-
-
-
-
-  
- else if (received_message.text == "shop") {
-    response = {
-      "text": 'building(1315) room(13) is my address ok! see you.'
-    }
-  }
-  else if (received_message.text == "No") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'OK. Thank you!',
-    }
-  }
    
   
 
