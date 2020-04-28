@@ -991,11 +991,11 @@ function handlePostback(sender_psid, received_postback) {
                   {
                     "content_type":"text",
                     "title":"It is 4 hr",
-                    "payload":"gg"
+                    "payload":"wd"
                   },{
                     "content_type":"text",
                     "title":"It is 5 hr",
-                    "payload":"gg"
+                    "payload":"wd"
                   }
                   ]
      }
