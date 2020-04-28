@@ -657,11 +657,11 @@ else if (received_message.text=== 'It is 4 hr') {
                   {
                     "content_type":"text",
                     "title":"Make Book",
-                    "payload":"D"
+                    "payload":"E"
                   },{
                     "content_type":"text",
                     "title":"Cancel",
-                    "payload":"IWC"
+                    "payload":"O"
                   }]
 
     }
@@ -784,11 +784,11 @@ else   if (received_message.text == "Customer Home") {
                   {
                     "content_type":"text",
                     "title":"Make Book",
-                    "payload":"D"
+                    "payload":"E"
                   },{
                     "content_type":"text",
                     "title":"Cancel",
-                    "payload":"IWC"
+                    "payload":"Q"
                   }]
 
     }
