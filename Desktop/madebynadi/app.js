@@ -701,20 +701,45 @@ function handlePostback(sender_psid, received_postback) {
                   
      }
   }
-  else if (payload === 'vf') {
-    response = { "text": "All of my feedback are following",
-                  "quick_replies":[
-                  {
-                    "content_type":"text",
-                    "title":"Yes!",
-                    "payload":"D"
-                  },{
-                    "content_type":"text",
-                    "title":"No!",
-                    "payload":"IWC"
-                  }]
-     }
+   else if (received_message.payload === 'vf') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements":[
+           {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/kX1qZdV.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc11"
+              }              
+            ]      
+          }
+        ]
+      }
+    }
   }
+}
+
+
+
+
+
+
    else if (payload === 'wd') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
