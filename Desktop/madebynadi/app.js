@@ -125,11 +125,9 @@ app.get('/webhook', (req, res) => {
 var make = {
   bookingdate:false,
   bdk:false,
-  cusaddress:false,
-  add:false,
   };
 
-  var take ={
+  var take = {
     cusaddress:false,
     add:false,
   }:
@@ -566,15 +564,6 @@ make.bookingdate=false;
     }
     take.add= false;
   }
-
-
-
-
-
-
-
-
-
  else  if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
     response = {
       "text": `write the date.`
@@ -621,6 +610,22 @@ make.bookingdate=false;
     }
     make.bdk= false;
   }
+
+else if (received_message.text === 'please send me details address') {
+    response = { 
+      "text":"Please enter the address", 
+      "metadata" : "plz send me details address"
+  }
+  take.cusaddress="point"
+}
+
+ else if (received_message.text === 'Please enter the address') {
+    response = { 
+      "attachment": {
+      "text": 'Thank you for make me book and choosing ',
+    }
+  }
+}
 
 
 else if (received_message.text=== 'It is 4 hr') {
