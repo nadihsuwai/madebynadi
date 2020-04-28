@@ -577,7 +577,7 @@ make.bookingdate=false;
     }
     make.bdk= false;
   }
-else if (received_message.text=== 'It is 4 am') {
+else if (received_message.text=== '') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
                   {
@@ -990,15 +990,11 @@ function handlePostback(sender_psid, received_postback) {
                   "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"It is 4 am",
+                    "title":"It is 4 hr",
                     "payload":"gg"
                   },{
                     "content_type":"text",
-                    "title":"It is 5 am",
-                    "payload":"gg"
-                  },{
-                    "content_type":"text",
-                    "title":"It is 6 am",
+                    "title":"It is 5 hr",
                     "payload":"gg"
                   }
                   ]
