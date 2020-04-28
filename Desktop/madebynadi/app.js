@@ -125,7 +125,14 @@ app.get('/webhook', (req, res) => {
 var make = {
   bookingdate:false,
   bdk:false,
+  cusaddress:false,
+  add:false,
   };
+
+  var take ={
+    cusaddress:false,
+    add:false,
+  }:
 function handleMessage(sender_psid, received_message) {
    
   let response;
@@ -138,6 +145,14 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": 'hello! Welcome madebynadi Page.Thank for visiting my page.',
     }
+  }
+   else if (received_message.text == "point") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank you for make me book and choosing ',
+    }
+    cusaddress:false;
   }
  else if(make.bookingdate === "waiting") {
     response = { 
@@ -531,6 +546,35 @@ make.bookingdate=false;
       "text": 'OK',
     }
   }
+  else  if (received_message.text == "please send me details address" || received_message.text == "please send me details address") {    
+    response = {
+      "text": `write the address.`
+    }
+   take.cusaddress = true;
+  }else if (received_message.text && make.bookingdate == true) {   
+    userEnteredtake.cusaddress =  received_message.text;
+    response = {
+      "text": `Fill the address.`
+    }
+   take.cusaddress = false;
+   take.add= true;
+ }
+ else if (received_message.text && take.add == true) {
+   userEnteredtake.add =  received_message.text;
+    response =  {
+      "text": 'Thank you for make me book and choosing ',
+    }
+    take.add= false;
+  }
+
+
+
+
+
+
+
+
+
  else  if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
     response = {
       "text": `write the date.`
