@@ -577,7 +577,9 @@ make.bookingdate=false;
     }
     make.bdk= false;
   }
-else if (received_message.text=== '') {
+
+
+else if (received_message.text=== 'It is 4 hr') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
                   {
