@@ -122,12 +122,12 @@ app.get('/webhook', (req, res) => {
     }
   }
 });
-
-function handleMessage(sender_psid, received_message) {
-   var make = {
+var make = {
   bookingdate:false,
   bdk:false,
   };
+function handleMessage(sender_psid, received_message) {
+   
   let response;
 
   
@@ -139,7 +139,7 @@ function handleMessage(sender_psid, received_message) {
       "text": 'hello! Welcome madebynadi Page.Thank for visiting my page.',
     }
   }
-  if(received_message.metadata === 'cbd2') {
+ else if(make.bookingdate === "waiting") {
     response = { 
       "attachment": {
                   "type": "template",
@@ -517,26 +517,26 @@ function handleMessage(sender_psid, received_message) {
     }
   }
 }
-   if (received_message.text == "Yes!") {    
+  else if (received_message.text == "Yes!") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'Thank you',
     }
   }
-    if (received_message.text == "No!") {    
+ else  if (received_message.text == "No!") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'OK',
     }
   }
-   if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
+ else  if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
     response = {
       "text": `write the date.`
     }
     make.bookingdate = true;
-  } if (received_message.text && make.bookingdate == true) {   
+  }else if (received_message.text && make.bookingdate == true) {   
     userEnteredmake.bookingdate =  received_message.text;
     response = {
       "text": `Please fill the date.`
@@ -544,7 +544,7 @@ function handleMessage(sender_psid, received_message) {
    make.bookingdate = false;
    make.bdk= true;
  }
-  if (received_message.text && make.bdk == true) {
+ else if (received_message.text && make.bdk == true) {
    userEnteredmake.bdk =  received_message.text;
     response = { 
       "attachment": {
@@ -577,7 +577,7 @@ function handleMessage(sender_psid, received_message) {
     }
     make.bdk= false;
   }
-    if (received_message.text == "Home") {    
+ else   if (received_message.text == "Home") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -594,7 +594,7 @@ function handleMessage(sender_psid, received_message) {
                   }]
     }
   }
-   if (received_message.text == "Order") {    
+ else  if (received_message.text == "Order") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -611,28 +611,28 @@ function handleMessage(sender_psid, received_message) {
                   }]
     }
   }
-    if (received_message.text == "Yes") {    
+ else   if (received_message.text == "Yes") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'Thank for my customer see you again.',
     }
   } 
-   if (received_message.text == "No") {    
+ else  if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'Thank for visiting by my page madebynadi.',
     }
   } 
-  if (received_message.text == "Cancle") {    
+ else if (received_message.text == "Cancle") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'Thank for visiting mypage.',
     }
   } 
-    if (received_message.text == "Shop") {    
+   else if (received_message.text == "Shop") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -651,7 +651,7 @@ function handleMessage(sender_psid, received_message) {
     }
   }
 
- if (received_message.text == "Order") {   
+else if (received_message.text == "Order") {   
 
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -670,20 +670,20 @@ function handleMessage(sender_psid, received_message) {
 
     }
   }
-   if (received_message.text == "Yes") {    
+else   if (received_message.text == "Yes") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'Thank for my customer see you again.',
     }
-  }   if (received_message.text == "No") {    
+  }  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'Thank for visiting by my page madebynadi.',
     }
   } 
-   if (received_message.text == "Cancle") {    
+  else if (received_message.text == "Cancle") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -692,16 +692,16 @@ function handleMessage(sender_psid, received_message) {
   } 
 
   
-   if (received_message.text == "home") {
+ else  if (received_message.text == "home") {
     response = {
       "text":'please send me details address'
     }
-  } if (received_message.text == "shop") {
+  }else if (received_message.text == "shop") {
     response = {
       "text": 'building(1315) room(13) is my address ok! see you.'
     }
   }
-   if (received_message.text == "No") {    
+  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -711,7 +711,7 @@ function handleMessage(sender_psid, received_message) {
    
   
 
-   if (received_message.text == "ni hao") {    
+  else if (received_message.text == "ni hao") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -804,6 +804,7 @@ function handlePostback(sender_psid, received_postback) {
       "text":"Please enter the exactly date", 
       "metadata" : "cbd2"
   }
+  make.bookingdate="waiting"
 }
 
  else if (payload === 'cbd2') {
@@ -867,7 +868,7 @@ function handlePostback(sender_psid, received_postback) {
         "template_type":"generic",
         "elements":[
            {
-            "title":"All of my customer feedback are followings",
+            "title":"my customer feedback",
             "image_url":"https://i.imgur.com/kX1qZdV.jpg",
             "subtitle":"MMK : 250 lkh",
             "default_action": {
@@ -880,15 +881,11 @@ function handlePostback(sender_psid, received_postback) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc11"
-              }              
+              }             
             ]      
           },
           {
-            "title":"All of my customer feedback are followings",
+            "title":"my customer feedback",
             "image_url":"https://i.imgur.com/bKvmY8y.jpg",
             "subtitle":"MMK : 250 lkh",
             "default_action": {
@@ -901,15 +898,11 @@ function handlePostback(sender_psid, received_postback) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc11"
-              }              
+              }             
             ]      
           },
           {
-            "title":"All of my customer feedback are followings",
+            "title":"my customer feedback",
             "image_url":"https://i.imgur.com/Qfij8Dy.jpg",
             "subtitle":"MMK : 250 lkh",
             "default_action": {
@@ -922,15 +915,11 @@ function handlePostback(sender_psid, received_postback) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc11"
-              }              
+              }             
             ]      
           },
           {
-            "title":"All of my customer feedback are followings",
+            "title":"my customer feedback",
             "image_url":"https://i.imgur.com/24kKTQF.jpg",
             "subtitle":"MMK : 250 lkh",
             "default_action": {
@@ -943,15 +932,11 @@ function handlePostback(sender_psid, received_postback) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc11"
               }              
             ]      
           },
           {
-            "title":"All of my customer feedback are followings",
+            "title":" my customer feedback ",
             "image_url":"https://i.imgur.com/2f8azjC.jpg",
             "subtitle":"MMK : 250 lkh",
             "default_action": {
@@ -964,15 +949,11 @@ function handlePostback(sender_psid, received_postback) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc11"
               }              
             ]      
           },
           {
-            "title":"All of my customer feedback are followings",
+            "title":"my customer feedback ",
             "image_url":"https://i.imgur.com/kX1qZdV.jpg",
             "subtitle":"MMK : 250 lkh",
             "default_action": {
@@ -985,11 +966,7 @@ function handlePostback(sender_psid, received_postback) {
                 "type":"web_url",
                 "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
                 "title":"More Information"
-              },{
-                "type":"postback",
-                "title":"Yes, I'm interested",
-                "payload":"sc11"
-              }              
+              }             
             ]      
           }
         ]
