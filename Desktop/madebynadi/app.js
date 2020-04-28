@@ -130,7 +130,7 @@ var make = {
   var take = {
     cusaddress:false,
     add:false,
-  }:
+  };
 function handleMessage(sender_psid, received_message) {
    
   let response;
