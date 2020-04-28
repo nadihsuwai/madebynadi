@@ -577,7 +577,7 @@ make.bookingdate=false;
     }
     make.bdk= false;
   }
- else   if (received_message.text == "Home") {    
+ else   if (received_message.text == "Customer home") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -632,7 +632,7 @@ make.bookingdate=false;
       "text": 'Thank for visiting mypage.',
     }
   } 
-   else if (received_message.text == "Shop") {    
+   else if (received_message.text == "Makeup artist home") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -985,11 +985,11 @@ function handlePostback(sender_psid, received_postback) {
                   "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"Home",
+                    "title":"Customer home",
                     "payload":"wd"
                   },{
                     "content_type":"text",
-                    "title":"Shop",
+                    "title":"Makeup artist home",
                     "payload":"wd"
                   }]
      }
