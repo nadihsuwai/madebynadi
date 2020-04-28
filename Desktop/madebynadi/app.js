@@ -812,7 +812,7 @@ function handlePostback(sender_psid, received_postback) {
                 "payload":"sc11"
               }              
             ]      
-          }
+          },
           {
             "title":"All of my customer feedback are followings",
             "image_url":"https://i.imgur.com/kX1qZdV.jpg",
