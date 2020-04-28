@@ -581,11 +581,11 @@ make.bookingdate=false;
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": '50000 kyats and will you make the order',
+      "text": '50000 kyats and will you make the book',
        "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"Order",
+                    "title":"Book Now",
                     "payload":"D"
                   },{
                     "content_type":"text",
@@ -594,11 +594,11 @@ make.bookingdate=false;
                   }]
     }
   }
- else  if (received_message.text == "Order") {    
+ else  if (received_message.text == "Book Now") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'Are you sure your order?',
+      "text": 'Are you sure your book?',
       "quick_replies":[
                   {
                     "content_type":"text",
@@ -636,11 +636,11 @@ make.bookingdate=false;
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": '45000 kyats and will you make the order',
+      "text": '45000 kyats and will you make the book',
       "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"Order",
+                    "title":"Make Book",
                     "payload":"D"
                   },{
                     "content_type":"text",
@@ -651,12 +651,12 @@ make.bookingdate=false;
     }
   }
 
-else if (received_message.text == "Order") {   
+else if (received_message.text == "Make Book") {   
 
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-       "text": 'Are you sure your order',
+       "text": 'Are you sure your book',
       "quick_replies":[
                   {
                     "content_type":"text",
