@@ -169,7 +169,7 @@ function handleMessage(sender_psid, received_message) {
                   }
                 }
     }
-
+make.bookingdate=false;
   }
    else if (received_message.text === 'Wedding') {
     response = {
