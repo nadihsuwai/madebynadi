@@ -618,7 +618,7 @@ else if (received_message.text=== 'It is 4 hr') {
       "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"Yes",
+                    "title":"YES",
                     "payload":"mm"
                   },{
                     "content_type":"text",
@@ -627,7 +627,7 @@ else if (received_message.text=== 'It is 4 hr') {
                   }]
     }
   }
- else   if (received_message.text == "Yes") {    
+ else   if (received_message.text == "YES") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -648,6 +648,7 @@ else if (received_message.text=== 'It is 4 hr') {
       "text": 'Thank for visiting and interesting mypage.',
     }
   } 
+   
    else if (received_message.text == "Shop") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -661,7 +662,7 @@ else if (received_message.text=== 'It is 4 hr') {
                   },{
                     "content_type":"text",
                     "title":"Cancel",
-                    "payload":"O"
+                    "payload":"Z"
                   }]
 
     }
@@ -746,7 +747,7 @@ else if (received_message.text == "Customer Home") {
       "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"Yes",
+                    "title":"YES",
                     "payload":"mm"
                   },{
                     "content_type":"text",
@@ -755,7 +756,7 @@ else if (received_message.text == "Customer Home") {
                   }]
     }
   }
- else if (received_message.text == "Yes") {    
+ else if (received_message.text == "YES") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
