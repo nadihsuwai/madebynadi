@@ -706,6 +706,139 @@ else   if (received_message.text == "Yes") {
       "text": 'Thank for visiting mypage.',
     }
   } 
+else if (received_message.text=== 'It is 5 hr') {
+    response = { "text": " choose package price for your choose location",
+                  "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Customer Home",
+                    "payload":"gg"
+                  },{
+                    "content_type":"text",
+                    "title":"Shop",
+                    "payload":"gg"
+                  }]
+     }
+  }
+else   if (received_message.text == "Customer Home") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": '50000 kyats and will you make the book',
+       "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Book Now",
+                    "payload":"D"
+                  },{
+                    "content_type":"text",
+                    "title":"Cancle",
+                    "payload":"IWC"
+                  }]
+    }
+  }
+ else  if (received_message.text == "Book Now") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Are you sure your book?',
+      "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Yes",
+                    "payload":"D"
+                  },{
+                    "content_type":"text",
+                    "title":"No",
+                    "payload":"IWC"
+                  }]
+    }
+  }
+ else   if (received_message.text == "Yes") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'please send me details address',
+    }
+  } 
+ else  if (received_message.text == "No") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting my page if u intetest of my work can u contact me.',
+    }
+  } 
+ else if (received_message.text == "Cancle") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting mypage.',
+    }
+  } 
+   else if (received_message.text == "Shop") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": '45000 kyats and will you make the book',
+      "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Make Book",
+                    "payload":"D"
+                  },{
+                    "content_type":"text",
+                    "title":"Cancle",
+                    "payload":"IWC"
+                  }]
+
+    }
+  }
+
+else if (received_message.text == "Make Book") {   
+
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+       "text": 'Are you sure your book',
+      "quick_replies":[
+                  {
+                    "content_type":"text",
+                    "title":"Yes",
+                    "payload":"D"
+                  },{
+                    "content_type":"text",
+                    "title":"No",
+                    "payload":"IWC"
+                  }]
+
+    }
+  }
+else   if (received_message.text == "Yes") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for my customer see you again.',
+    }
+  }  else if (received_message.text == "No") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting by my page madebynadi.',
+    }
+  } 
+  else if (received_message.text == "Cancle") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank for visiting mypage.',
+    }
+  } 
+
+
+
+
+
+
 
   
  else if (received_message.text == "shop") {
