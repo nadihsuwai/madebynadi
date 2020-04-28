@@ -304,7 +304,7 @@ function handleMessage(sender_psid, received_message) {
 
     }
   }
-
+  
  if (received_message.text == "Order") {   
 
     // Create the payload for a basic text message, which
