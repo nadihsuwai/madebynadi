@@ -585,11 +585,11 @@ else if (received_message.text=== 'It is 4 hr') {
                   {
                     "content_type":"text",
                     "title":"Customer Home",
-                    "payload":"wd"
+                    "payload":"gg"
                   },{
                     "content_type":"text",
                     "title":"Shop",
-                    "payload":"wd"
+                    "payload":"gg"
                   }]
      }
   }
