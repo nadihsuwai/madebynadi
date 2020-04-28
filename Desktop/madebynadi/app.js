@@ -619,11 +619,11 @@ else if (received_message.text=== 'It is 4 hr') {
                   {
                     "content_type":"text",
                     "title":"Yes",
-                    "payload":"D"
+                    "payload":"mm"
                   },{
                     "content_type":"text",
                     "title":"No",
-                    "payload":"IWC"
+                    "payload":"ll"
                   }]
     }
   }
@@ -729,11 +729,11 @@ else   if (received_message.text == "Customer Home") {
                   {
                     "content_type":"text",
                     "title":"Book Now",
-                    "payload":"D"
+                    "payload":"mm"
                   },{
                     "content_type":"text",
                     "title":"Cancel",
-                    "payload":"IWC"
+                    "payload":"ll"
                   }]
     }
   }
@@ -746,11 +746,11 @@ else   if (received_message.text == "Customer Home") {
                   {
                     "content_type":"text",
                     "title":"Yes",
-                    "payload":"D"
+                    "payload":"mm"
                   },{
                     "content_type":"text",
                     "title":"No",
-                    "payload":"IWC"
+                    "payload":"ll"
                   }]
     }
   }
