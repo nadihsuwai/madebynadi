@@ -701,7 +701,7 @@ function handlePostback(sender_psid, received_postback) {
                   
      }
   }
-   else if (received_message.payload === 'vf') {
+   else if (payload === 'vf') {
     response = {
     "attachment":{
       "type":"template",
