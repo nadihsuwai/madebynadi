@@ -362,7 +362,7 @@ function handleMessage(sender_psid, received_message) {
           },
           {
             "title":"Customer sample photo",
-            "image_url":"https://i.imgur.com/DLV29Hr.jpg",
+            "image_url":"https://i.imgur.com/DLV29Hr.jpg?1",
             "subtitle":"donation",
             "default_action": {
               "type": "web_url",
