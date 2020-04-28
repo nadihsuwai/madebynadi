@@ -549,7 +549,7 @@ make.bookingdate=false;
       "text": `write the address.`
     }
    take.cusaddress = true;
-  }else if (received_message.text && make.bookingdate == true) {   
+  }else if (received_message.text && take.cusaddress == true) {   
     userEnteredtake.cusaddress =  received_message.text;
     response = {
       "text": `Fill the address.`
