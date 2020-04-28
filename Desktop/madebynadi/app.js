@@ -309,6 +309,286 @@ function handleMessage(sender_psid, received_message) {
     }
   }
 }
+ else if (received_message.text === 'Donation') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements":[
+           {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/VspQd36.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc14"
+              }              
+            ]      
+          },
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/UwQTD5Y.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc14"
+              }              
+            ]      
+          },
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/5a4Ti2D.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc14"
+              }              
+            ]      
+          },
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/t38KmhQ.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc14"
+              }              
+            ]      
+          },
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/DLV29Hr.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc14"
+              }              
+            ]      
+          },
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/KNPzRB8.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc14"
+              }              
+            ]      
+          }
+        ]
+      }
+    }
+  }
+}
+
+
+
+
+ else if (received_message.text === 'Graduation') {
+    response = {
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements":[
+           {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/ZZj3eZB.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc13"
+              }              
+            ]      
+          },
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/gUGy90c.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc13"
+              }              
+            ]      
+          },
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/3XrG7Kw.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc13"
+              }              
+            ]      
+          },
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/obeiK5j.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc13"
+              }              
+            ]      
+          },
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/wsRYf4u.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc13"
+              }              
+            ]      
+          },
+          {
+            "title":"All of my customer feedback are followings",
+            "image_url":"https://i.imgur.com/yFRMHBR.jpg",
+            "subtitle":"MMK : 250 lkh",
+            "default_action": {
+              "type": "web_url",
+              "url": "https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+              "webview_height_ratio": "tall",
+            },
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://www.facebook.com/110838683814597/posts/141568527408279/?d=n",
+                "title":"More Information"
+              },{
+                "type":"postback",
+                "title":"Yes, I'm interested",
+                "payload":"sc13"
+              }              
+            ]      
+          }
+        ]
+      }
+    }
+  }
+}
    if (received_message.text == "Yes!") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
