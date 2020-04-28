@@ -361,13 +361,7 @@ function handleMessage(sender_psid, received_message) {
       "text": 'OK. Thank you!',
     }
   }
-   if (received_message.text == "Yes, I'm interested") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'Thank you for interesting of my page see you again.',
-    }
-  }
+   
   if (received_message.text === 'Wedding') {
     response = {
     "attachment":{
@@ -847,7 +841,13 @@ function handlePostback(sender_psid, received_postback) {
   }
 }
 
-
+if (received_message.payload == "sc11") {    
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": 'Thank you for interesting of my page see you again.',
+    }
+  }
 
 
 
