@@ -126,7 +126,6 @@ var make = {
   bookingdate:false,
   bdk:false,
   };
-
 function handleMessage(sender_psid, received_message) {
    
   let response;
