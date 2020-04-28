@@ -686,13 +686,14 @@ else if (received_message.text == "Make Book") {
 
     }
   }
-else   if (received_message.text == "Yes") {    
+else if (received_message.text == "Yes") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'building(1315) room(13) is my address thank you choose and trust me ok! see you..',
+      "text": 'building(1315) room(13) is my address thank you choose and trust me ok! see you.',
     }
-  }  else if (received_message.text == "No") {    
+  }  
+  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -720,7 +721,7 @@ else if (received_message.text=== 'It is 5 hr') {
                   }]
      }
   }
-else   if (received_message.text == "Customer Home") {    
+else if (received_message.text == "Customer Home") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -737,7 +738,7 @@ else   if (received_message.text == "Customer Home") {
                   }]
     }
   }
- else  if (received_message.text == "Book Now") {    
+ else if (received_message.text == "Book Now") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -754,14 +755,14 @@ else   if (received_message.text == "Customer Home") {
                   }]
     }
   }
- else   if (received_message.text == "Yes") {    
+ else if (received_message.text == "Yes") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": 'please send me details address',
     }
   } 
- else  if (received_message.text == "No") {    
+ else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
@@ -784,11 +785,11 @@ else   if (received_message.text == "Customer Home") {
                   {
                     "content_type":"text",
                     "title":"Make Book",
-                    "payload":"E"
+                    "payload":"K"
                   },{
                     "content_type":"text",
                     "title":"Cancel",
-                    "payload":"Q"
+                    "payload":"P"
                   }]
 
     }
@@ -804,22 +805,23 @@ else if (received_message.text == "Make Book") {
                   {
                     "content_type":"text",
                     "title":"Yes",
-                    "payload":"W"
+                    "payload":"V"
                   },{
                     "content_type":"text",
                     "title":"No",
-                    "payload":"Y"
+                    "payload":"X"
                   }]
 
     }
   }
-else   if (received_message.text == "Yes") {    
+else if (received_message.text == "Yes") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'building(1315) room(13) is my address thank you choose and trust me ok! see you..',
+    "text": 'building(1315) room(13) is my address thank you choose and trust me ok! see you.',
     }
-  }  else if (received_message.text == "No") {    
+  }  
+  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
