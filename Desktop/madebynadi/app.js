@@ -150,7 +150,7 @@ function handleMessage(sender_psid, received_message) {
     response = {
       "text": 'Thank you for make me book and choosing ',
     }
-    take.cusaddress:false;
+    take.cusaddress=false;
   }
  else if(make.bookingdate === "waiting") {
     response = { 
