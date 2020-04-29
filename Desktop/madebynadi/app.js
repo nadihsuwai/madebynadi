@@ -578,15 +578,15 @@ make.bookingdate=false;
     }
     make.bdk= false;
   }
-}else if (received_message.text && make.cusaddress == true) {   
+
+
+else if (received_message.text && make.cusaddress == true) {   
     userEnteredmake.cusaddress =  received_message.text;
     response = {
       "text": `Thank for booking me if have a chance let meet at again.`
     }
    make.cusaddress = false;
  }
-
-
 else if (received_message.text=== 'It is 4 am') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
