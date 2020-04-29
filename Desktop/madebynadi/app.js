@@ -579,7 +579,7 @@ make.bookingdate=false;
   }
 
 
-else if (received_message.text=== 'It is 4 hr') {
+else if (received_message.text=== 'It is 4 am') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
                   {
@@ -707,7 +707,7 @@ else if (received_message.text == "Yes") {
       "text": 'Thank for visiting and interesting mypage.',
     }
   } 
-else if (received_message.text=== 'It is 5 hr') {
+else if (received_message.text=== 'It is 5 am') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
                   {
@@ -1116,11 +1116,11 @@ function handlePostback(sender_psid, received_postback) {
                   "quick_replies":[
                   {
                     "content_type":"text",
-                    "title":"It is 4 hr",
+                    "title":"It is 4 am",
                     "payload":"wd"
                   },{
                     "content_type":"text",
-                    "title":"It is 5 hr",
+                    "title":"It is 5 am",
                     "payload":"wd"
                   }
                   ]
