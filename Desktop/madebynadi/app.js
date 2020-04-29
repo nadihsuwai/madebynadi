@@ -579,7 +579,7 @@ make.bookingdate=false;
     }
     make.bdk= false;
   }
- else  if (received_message.text == "Please enter the details address" || received_message.text == "Please enter the details address") {    
+ else  if (received_message.text == "please enter the details address" || received_message.text == "please enter the details address") {    
     response = {
       "text": `write the address.`
     }
@@ -587,7 +587,7 @@ make.bookingdate=false;
   }else if (received_message.text && make.cusaddress == true) {   
     userEnteredmake.cusaddress =  received_message.text;
     response = {
-      "text": `Please fill the address.`
+      "text": `please fill the address.`
     }
    make.cusaddress = false;
    make.thz= true;
@@ -868,7 +868,7 @@ else if (received_message.text == "No") {
     }
   }
    
-  else if (received_message.text == "Please send me details address") {    
+  else if (received_message.text == "please send me details address") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
