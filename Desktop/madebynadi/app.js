@@ -126,6 +126,10 @@ var make = {
   bookingdate:false,
   bdk:false,
   };
+var take = {
+  cusaddress:false,
+  add:false,
+}
 function handleMessage(sender_psid, received_message) {
    
   let response;
@@ -517,6 +521,18 @@ make.bookingdate=false;
     }
   }
 }
+else if (payload === 'YES') {
+    response = { 
+      "text":"Please enter details address", 
+      "metadata" : "YES2"
+  }
+  take.cusaddress="point"
+}
+
+ else if (payload === 'YES2') {
+    response = { "text": 'Thank for make me book if have a chance see you again.',
+     }
+  }
   else if (received_message.text == "Yes!") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -579,6 +595,27 @@ make.bookingdate=false;
   }
 
 
+else  if (received_message.text == "Please enter the detials address" || received_message.text == "Please enter the details address") {    
+    response = {
+      "text": `write the address.`
+    }
+    take.cusaddress = true;
+  }else if (received_message.text && take.cusaddress == true) {   
+    userEnteredtake.cusaddress =  received_message.text;
+    response = {
+      "text": `Please fill the address.`
+    }
+   take.cusaddress = false;
+   take.add= true;
+ }
+ else if (received_message.text && take.add == true) {
+   userEnteredtake.add =  received_message.text;
+    response = { 
+      "text": " Thank for make me book if have a chance see you again.",
+    }
+    take.add= false;
+  }
+
 else if (received_message.text=== 'It is 4 hr') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
@@ -627,13 +664,7 @@ else if (received_message.text=== 'It is 4 hr') {
                   }]
     }
   }
- else   if (received_message.text == "YES") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'please send me details address',
-    }
-  } 
+  
  else  if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -755,13 +786,7 @@ else if (received_message.text == "Customer Home") {
                   }]
     }
   }
- else if (received_message.text == "YES") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'please send me details address',
-    }
-  } 
+
  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
