@@ -611,7 +611,7 @@ make.bookingdate=false;
     make.bdk= false;
   }
 
-else if (payload === 'YES') {
+else if (received_message.text === 'YES') {
     response = { 
       "text":"Please enter the details address", 
       "metadata" : "YES2"
@@ -619,9 +619,9 @@ else if (payload === 'YES') {
   take.cusaddress="point"
 }
 
- else if (payload === 'YES2') {
+ else if (received_message.text=== 'YES2') {
     response = { 
-      "text:Thank you for make me book and choosing",    
+      "text:Thank you for make me book and choosing ",    
     }
   }
 
