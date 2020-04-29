@@ -584,7 +584,8 @@ make.bookingdate=false;
       "text": `write the address.`
     }
     make.cusaddress = true;
-  }else if (received_message.text && make.cusaddress == true) {   
+  }
+  else if (received_message.text && make.cusaddress == true) {   
     userEnteredmake.cusaddress =  received_message.text;
     response = {
       "text": `please fill the address.`
