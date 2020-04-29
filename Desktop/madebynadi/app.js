@@ -611,21 +611,20 @@ make.bookingdate=false;
     make.bdk= false;
   }
 
-else if (received_message.text === 'YES') {
+else if (payload === 'YES') {
     response = { 
       "text":"Please enter the details address", 
-      "metadata" : "plz send me details address"
+      "metadata" : "YES2"
   }
   take.cusaddress="point"
 }
 
- else if (received_message.text === 'Please enter the address') {
+ else if (payload === 'YES2') {
     response = { 
-      "attachment": {
-      "text": 'Thank you for make me book and choosing ',
+      "text:Thank you for make me book and choosing",    
     }
   }
-}
+
 
 
 else if (received_message.text=== 'It is 4 hr') {
@@ -676,13 +675,7 @@ else if (received_message.text=== 'It is 4 hr') {
                   }]
     }
   }
- else   if (received_message.text == "YES") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'please send me details address',
-    }
-  } 
+ 
  else  if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -805,13 +798,7 @@ else if (received_message.text == "Customer Home") {
                   }]
     }
   }
- else if (received_message.text == "YES") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'please send me details address',
-    }
-  } 
+
  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
