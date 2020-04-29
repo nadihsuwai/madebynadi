@@ -580,7 +580,6 @@ make.bookingdate=false;
   }
 
 else if (received_message.text && make.cusaddress == true) {   
-    userEnteredmake.cusaddress =  received_message.text;
     response = {
       "text": `Thank for booking me if have a chance let meet at again.`
     }
@@ -640,6 +639,7 @@ else if (received_message.text=== 'It is 4 am') {
     response = {
       "text": 'please send me details address',
     }
+
   } 
  else  if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
@@ -768,6 +768,7 @@ else if (received_message.text == "Customer Home") {
     response = {
       "text": 'please send me details address',
     }
+     
   } 
  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
@@ -1132,7 +1133,7 @@ function handlePostback(sender_psid, received_postback) {
                   }
                   ]
      }
-       make.cusaddress=true; 
+     make.cusaddress=true; 
   }
 
 
