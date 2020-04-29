@@ -589,7 +589,7 @@ else if (received_message.text=== 'It is 4 hr') {
                   },{
                     "content_type":"text",
                     "title":"Shop",
-                    "payload":"LL"
+                    "payload":"gg"
                   }]
      }
   }
@@ -648,7 +648,6 @@ else if (received_message.text=== 'It is 4 hr') {
       "text": 'Thank for visiting and interesting mypage.',
     }
   } 
-   
    else if (received_message.text == "Shop") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
@@ -662,7 +661,7 @@ else if (received_message.text=== 'It is 4 hr') {
                   },{
                     "content_type":"text",
                     "title":"Cancel",
-                    "payload":"Z"
+                    "payload":"O"
                   }]
 
     }
