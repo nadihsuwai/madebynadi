@@ -126,7 +126,6 @@ var make = {
   bookingdate:false,
   bdk:false,
   cusaddress:false,
-  thz:false,
   };
 function handleMessage(sender_psid, received_message) {
    
@@ -579,27 +578,14 @@ make.bookingdate=false;
     }
     make.bdk= false;
   }
- else  if (received_message.text == "please enter me details address" || received_message.text == "please enter me details address") {    
-    response = {
-      "text": `write the address.`
-    }
-    make.cusaddress = true;
-  }
-  else if (received_message.text && make.cusaddress == true) {   
+}else if (received_message.text && make.cusaddress == true) {   
     userEnteredmake.cusaddress =  received_message.text;
     response = {
-      "text": `please fill the address.`
+      "text": `Thank for booking me if have a chance let meet at again.`
     }
    make.cusaddress = false;
-   make.thz= true;
  }
- else if (received_message.text && make.thz == true) {
-   userEnteredmake.thz =  received_message.text;
-    response = {
-      "text": 'Thank you for book me if have a chance see you again.',
-    }
-    make.thz= false;
-  }
+
 
 else if (received_message.text=== 'It is 4 am') {
     response = { "text": " choose package price for your choose location",
@@ -655,7 +641,7 @@ else if (received_message.text=== 'It is 4 am') {
     response = {
       "text": 'please send me details address',
     }
-    make.thz=true;
+    
   } 
  else  if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
@@ -784,7 +770,6 @@ else if (received_message.text == "Customer Home") {
     response = {
       "text": 'please send me details address',
     }
-    make.thz=true;
   } 
  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
@@ -869,13 +854,7 @@ else if (received_message.text == "No") {
     }
   }
    
-  else if (received_message.text == "please send me details address") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'Thank you for book me if have a chance see you again.',
-    }
-  }
+  
 
   else if (received_message.text == "ni hao") {    
     // Create the payload for a basic text message, which
@@ -1155,6 +1134,7 @@ function handlePostback(sender_psid, received_postback) {
                   }
                   ]
      }
+     cusaddress=true;
   }
 
 
