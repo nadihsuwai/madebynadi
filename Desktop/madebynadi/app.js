@@ -692,7 +692,7 @@ else if (received_message.text == "Yes") {
     response = {
       "text": 'building(1315) room(13) is my address thank you choose and trust me ok! see you.',
     }
-  }  
+  } 
   else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
