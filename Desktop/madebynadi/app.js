@@ -579,7 +579,7 @@ make.bookingdate=false;
     }
     make.bdk= false;
   }
- else  if (received_message.text == "please enter the details address" || received_message.text == "please enter the details address") {    
+ else  if (received_message.text == "please enter me details address" || received_message.text == "please enter me details address") {    
     response = {
       "text": `write the address.`
     }
