@@ -640,7 +640,7 @@ else if (received_message.text=== 'It is 4 am') {
     response = {
       "text": 'please send me details address',
     }
-    make.cusaddress=true;
+    
   } 
  else  if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
@@ -769,7 +769,7 @@ else if (received_message.text == "Customer Home") {
     response = {
       "text": 'please send me details address',
     }
-   make.cusaddress=true; 
+   
   } 
  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
@@ -1134,6 +1134,7 @@ function handlePostback(sender_psid, received_postback) {
                   }
                   ]
      }
+      make.cusaddress=true;
   }
 
 
