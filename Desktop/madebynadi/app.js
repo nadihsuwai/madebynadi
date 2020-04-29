@@ -126,7 +126,7 @@ var make = {
   bookingdate:false,
   bdk:false,
   cusaddress:false,
-  };
+    };
 function handleMessage(sender_psid, received_message) {
    
   let response;
@@ -580,13 +580,6 @@ make.bookingdate=false;
   }
 
 
-else if (received_message.text && make.cusaddress == true) {   
-    userEnteredmake.cusaddress =  received_message.text;
-    response = {
-      "text": `Thank for booking me if have a chance let meet at again.`
-    }
-   make.cusaddress = false;
- }
 else if (received_message.text=== 'It is 4 am') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
@@ -770,6 +763,7 @@ else if (received_message.text == "Customer Home") {
     response = {
       "text": 'please send me details address',
     }
+    
   } 
  else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
@@ -1134,7 +1128,6 @@ function handlePostback(sender_psid, received_postback) {
                   }
                   ]
      }
-     cusaddress=true;
   }
 
 
