@@ -611,9 +611,9 @@ make.bookingdate=false;
     make.bdk= false;
   }
 
-else if (received_message.text === 'please send me details address') {
+else if (received_message.text === 'YES') {
     response = { 
-      "text":"Please enter the address", 
+      "text":"Please enter the details address", 
       "metadata" : "plz send me details address"
   }
   take.cusaddress="point"
