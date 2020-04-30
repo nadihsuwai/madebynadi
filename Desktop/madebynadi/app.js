@@ -27,9 +27,27 @@ const
   request = require('request'),
   express = require('express'),
   body_parser = require('body-parser'),
-  app = express().use(body_parser.json()); // creates express http server
-
+  firebase = require("firebase-admim"),
+  app = express();
+  // creates express http server
+   app.use(body_parser.json());
+app.use(body_parser.urlencoded());
 // Sets server port and logs message on success
+var firebaseConfig = {
+     credential: firebase.credential.cert({
+    "private_key": process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
+    "client_email": process.env.FIREBASE_CLIENT_EMAIL,
+    "project_id": process.env.FIREBASE_PROJECT_ID,    
+    }),
+    databaseURL: process.env.FIREBASE_DB_URL, 
+    
+  };
+
+
+
+firebase.initializeApp(firebaseConfig);
+
+let db = firebase.firestore();
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
 // Accepts POST requests at /webhook endpoint
@@ -140,6 +158,31 @@ function handleMessage(sender_psid, received_message) {
       "text": 'hello! Welcome madebynadi Page.Thank for visiting my page.',
     }
   }
+  else if (received_message.text === 'save books') {
+
+   let book1 = {
+      title:"Gone with the Wind",
+      author:"Margaret Mitchell",
+      description:"Gone with the Wind is a novel by American writer Margaret Mitchell, first published in 1936. The story is set in Clayton County and Atlanta, both in Georgia, during the American Civil War and Reconstruction Era",
+      publisher:"Macmillan Inc.",
+      year: 1936,
+      genre:['Historical Fiction', 'Novel'],      
+    }
+
+    db.collection('Books').add(
+          book1
+        ).then(success => {      
+           console.log('BOOK ADDED');  
+            let response = {
+          "text": 'BOOK ADDED',
+        }
+           callSendAPI(sender_psid, response)           
+        }).catch(error => {
+          console.log(error);
+    });
+
+ }
+
  else if(make.bookingdate === "waiting") {
     response = { 
       "attachment": {
