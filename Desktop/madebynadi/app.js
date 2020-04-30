@@ -27,7 +27,7 @@ const
   request = require('request'),
   express = require('express'),
   body_parser = require('body-parser'),
-  firebase = require("firebase-admim"),
+  firebase = require("firebase-admin"),
   app = express();
   // creates express http server
    app.use(body_parser.json());
