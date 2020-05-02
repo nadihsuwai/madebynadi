@@ -144,6 +144,7 @@ var make = {
   bookingdate:false,
   bdk:false,
   cusaddress:false,
+  cusphnum:false,
     };
 function handleMessage(sender_psid, received_message) {
    
@@ -628,6 +629,12 @@ else if (received_message.text && make.cusaddress == true) {
     }
    make.cusaddress = false;
  }
+ else if (received_message.text && make.cusphnum == true) {   
+    response = {
+      "text": `building(1315) room(13) is my address thank you choose and trust me ok! see you.`
+    }
+   make.cusphnum = false;
+ }
 else if (received_message.text=== 'It is 4 am') {
     response = { "text": " choose package price for your choose location",
                   "quick_replies":[
@@ -680,7 +687,7 @@ else if (received_message.text=== 'It is 4 am') {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'please give me details address ',
+      "text": 'please give me details address and phone number',
     }
     make.cusaddress=true; 
   } 
@@ -740,8 +747,9 @@ else if (received_message.text == "Yes") {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'building(1315) room(13) is my address thank you choose and trust me ok! see you.',
+      "text": 'Please give me phone number.',
     }
+    make.cusphnum=true;
   } 
   else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
@@ -809,7 +817,7 @@ else if (received_message.text == "Customer Home") {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'please give me details address',
+      "text": 'please give me details address and phone number',
     }
     make.cusaddress=true; 
    } 
@@ -869,8 +877,9 @@ else if (received_message.text == "Yes") {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-    "text": 'building(1315) room(13) is my address thank you choose and trust me ok! see you.',
+    "text": 'Please give me phone number.',
     }
+    make.cusphnum=true;
   }  
   else if (received_message.text == "No") {    
     // Create the payload for a basic text message, which
