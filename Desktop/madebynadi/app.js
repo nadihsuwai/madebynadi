@@ -680,7 +680,7 @@ else if (received_message.text=== 'It is 4 am') {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'please send me details address',
+      "text": 'please give me your phone number and details address ',
     }
     make.cusaddress=true; 
   } 
@@ -809,7 +809,7 @@ else if (received_message.text == "Customer Home") {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-      "text": 'please send me details address',
+      "text": 'please give me your phone number and details address',
     }
     make.cusaddress=true; 
    } 
