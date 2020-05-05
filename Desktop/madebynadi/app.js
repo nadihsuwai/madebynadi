@@ -33,6 +33,16 @@ const
    app.use(body_parser.json());
 app.use(body_parser.urlencoded());
 // Sets server port and logs message on success
+
+var admin = require("firebase-admin");
+
+var serviceAccount = require("path/to/serviceAccountKey.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://madebynadi-92319.firebaseio.com"
+});
+
 var firebaseConfig = {
      credential: firebase.credential.cert({
     "private_key": process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
@@ -981,7 +991,7 @@ function handlePostback(sender_psid, received_postback) {
                         },
                         {
                           "type": "postback",
-                          "title": "choose booking date",
+                          "title": "make appointment",
                           "payload": "cbd",
                         },
                         {
