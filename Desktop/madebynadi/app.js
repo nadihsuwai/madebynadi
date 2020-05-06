@@ -981,7 +981,7 @@ function handlePostback(sender_psid, received_postback) {
                         },
                         {
                           "type": "postback",
-                          "title": "choose booking date",
+                          "title": "make appointment",
                           "payload": "cbd",
                         },
                         {
