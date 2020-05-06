@@ -39,7 +39,7 @@ var firebaseConfig = {
     "client_email": process.env.FIREBASE_CLIENT_EMAIL,
     "project_id": process.env.FIREBASE_PROJECT_ID,    
     }),
-    databaseURL: process.env.FIREBASE_DB_URL, 
+    databaseURL: https://madebynadi-92319.firebaseio.com, 
     
   };
 
@@ -981,7 +981,7 @@ function handlePostback(sender_psid, received_postback) {
                         },
                         {
                           "type": "postback",
-                          "title": "make appoinment",
+                          "title": "make appointment",
                           "payload": "cbd",
                         },
                         {
