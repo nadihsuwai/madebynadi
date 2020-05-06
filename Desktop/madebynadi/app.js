@@ -192,7 +192,7 @@ function handleMessage(sender_psid, received_message) {
                    "template_type": "generic",
                     "elements": [{
                       "title": "OK",
-                      "subtitle": "Please enter the exactly date",
+                      "subtitle": "Please choosing the packages",
                       "buttons": [
                         {
                           "type": "postback",
