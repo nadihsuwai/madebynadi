@@ -631,7 +631,7 @@ else if (received_message.text && make.cusaddress == true) {
  }
  else if (received_message.text && make.cusphnum == true) {   
     response = {
-      "text": `building(1315) room(13) is my address thank you choose and trust me ok!see you.`
+      "text": `building(1315) room(13),Aa ka(1000),Zabuthiri township is my address thank you choose and trust me ok!see you.`
     }
    make.cusphnum = false;
  }
