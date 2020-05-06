@@ -192,7 +192,7 @@ function handleMessage(sender_psid, received_message) {
                    "template_type": "generic",
                     "elements": [{
                       "title": "OK",
-                      "subtitle": "Please enter the exactly date",
+                      "subtitle": "Please choosing the package",
                       "buttons": [
                         {
                           "type": "postback",
@@ -598,7 +598,7 @@ make.bookingdate=false;
                    "template_type": "generic",
                     "elements": [{
                       "title": "OK",
-                      "subtitle": "Please enter the exactly date",
+                      "subtitle": "Please choosing the package",
                       "buttons": [
                         {
                           "type": "postback",
@@ -1011,7 +1011,7 @@ function handlePostback(sender_psid, received_postback) {
                    "template_type": "generic",
                     "elements": [{
                       "title": "OK",
-                      "subtitle": "Please enter the exactly date",
+                      "subtitle": "Please choosing the package",
                       "buttons": [
                         {
                           "type": "postback",
