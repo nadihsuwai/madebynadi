@@ -33,23 +33,13 @@ const
    app.use(body_parser.json());
 app.use(body_parser.urlencoded());
 // Sets server port and logs message on success
-
-var admin = require("firebase-admin");
-
-var serviceAccount = require("path/to/serviceAccountKey.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://madebynadi-92319.firebaseio.com"
-});
-
 var firebaseConfig = {
      credential: firebase.credential.cert({
     "private_key": process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
     "client_email": process.env.FIREBASE_CLIENT_EMAIL,
     "project_id": process.env.FIREBASE_PROJECT_ID,    
     }),
-    databaseURL: https://madebynadi-92319.firebaseio.com, 
+    databaseURL: process.env.FIREBASE_DB_URL, 
     
   };
 
