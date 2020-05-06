@@ -37,7 +37,7 @@ app.use(body_parser.urlencoded());
 var admin = require("firebase-admin");
 
 var serviceAccount = require("path/to/serviceAccountKey.json");
-
+//intialize firebase
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://madebynadi-92319.firebaseio.com"
