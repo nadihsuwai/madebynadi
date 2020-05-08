@@ -590,13 +590,6 @@ make.bookingdate=false;
    make.bdk= true;
  }
  else if (received_message.text && make.bdk == true) {
-    db.collection('order').add({
-      userId: sender_psid
-      date: received_message.text
-    }).then(success => {
-      make.database.Id = success.id;
-      make.database.User = sender_psid;
-    })
    userEnteredmake.bdk =  received_message.text;
     response = { 
       "attachment": {
