@@ -1,4 +1,21 @@
 
+
+Skip to content
+Using Gmail with screen readers
+
+1 of 72
+project code
+Inbox
+x
+
+May Thitsar Phoo
+Attachments
+7 May 2020, 21:49 (11 hours ago)
+to me
+
+
+Attachments area
+
 /**
  * Copyright 2017-present, Facebook, Inc. All rights reserved.
  *
@@ -590,7 +607,7 @@ make.bookingdate=false;
    make.bdk= true;
  }
  else if (received_message.text && make.bdk == true) {
-  db.collection('order').add({
+    db.collection('order').add({
       userId: sender_psid
       date: received_message.text
     }).then(success => {
@@ -628,6 +645,7 @@ make.bookingdate=false;
                 }
     }
     make.bdk= false;
+    
   }
 
 else if (received_message.text && make.cusaddress == true) {   
@@ -638,7 +656,7 @@ else if (received_message.text && make.cusaddress == true) {
  }
  else if (received_message.text && make.cusphnum == true) {   
     response = {
-      "text": `building(1315) room(13),Aaka (1000),Zabuthiri township nay pyi taw is my address! Thank you choose and trust me ok!see you.`
+      "text": `building(1315) room(13),Aa ka(1000),Zabuthiri township is my address thank you choose and trust me ok!see you.`
     }
    make.cusphnum = false;
  }
