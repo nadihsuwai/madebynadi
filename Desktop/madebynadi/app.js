@@ -39,7 +39,7 @@ var firebaseConfig = {
     "client_email": process.env.FIREBASE_CLIENT_EMAIL,
     "project_id": process.env.FIREBASE_PROJECT_ID,    
     }),
-    databaseURL: process.env.FIREBASE_DB_URL, 
+    databaseURL: "https://madebynadi-92319.firebaseio.com", 
     
   };
 
