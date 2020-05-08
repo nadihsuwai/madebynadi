@@ -623,7 +623,6 @@ make.bookingdate=false;
     make.bdk= false;
   }
 
-
 else if (received_message.text && make.cusaddress == true) {   
     response = {
       "text": `Thank for booking me if have a chance let meet at again.`
