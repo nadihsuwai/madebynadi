@@ -625,7 +625,7 @@ make.bookingdate=false;
 
 else if (received_message.text && make.cusaddress == true) {   
     response = {
-      "text": `Thank for booking me if have a chance let meet at again.`
+      "text": `Booking date is available or not available i will reconncet phone within 1 day Thank for booking me if have a chance let meet at again.`
     }
    make.cusaddress = false;
  }
@@ -877,7 +877,7 @@ else if (received_message.text == "Yes") {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
-    "text": 'Please give me phone number.',
+    "text": 'Please give me name and phone number.',
     }
     make.cusphnum=true;
   }  
