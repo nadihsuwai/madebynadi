@@ -48,15 +48,6 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 let db = firebase.firestore();
-
-let make = {
-  bookingdate:false,
-  bdk:false,
-  cusaddress:false,
-  cusphnum:false,
-    };
-    let userEnteredmake ={ 
-    };
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
 // Accepts POST requests at /webhook endpoint
@@ -149,7 +140,12 @@ app.get('/webhook', (req, res) => {
     }
   }
 });
-
+var make = {
+  bookingdate:false,
+  bdk:false,
+  cusaddress:false,
+  cusphnum:false,
+    };
 function handleMessage(sender_psid, received_message) {
    
   let response;
@@ -635,12 +631,6 @@ Thank for booking me if have a chance let meet at again.`
    make.cusaddress = false;
  }
  else if (received_message.text && make.cusphnum == true) {   
-   userEnteredmake.cusphnum=received_message.text;
-    let data={
-      cusbook:userEnteredmake.bookingdate,
-      cusphandnm:userEnteredmake.cusphnum,
-    }
-    db.collection('cusinfo').doc().set(data);
     response = {
       "text": `building(1315) room(13),Aaka (1000),Zabuthiri township nay pyi taw is my address!
 Thank you choose and trust me ok!see you.
