@@ -635,6 +635,7 @@ Thank for booking me if have a chance let meet at again.`
    make.cusaddress = false;
  }
  else if (received_message.text && make.cusphnum == true) {   
+   userEnteredmake.cusphnum=received_message.text;
     let data={
       cusbook:userEnteredmake.bookingdate,
       cusphandnm:userEnteredmake.cusphnum,
