@@ -39,7 +39,7 @@ var firebaseConfig = {
     "client_email": process.env.FIREBASE_CLIENT_EMAIL,
     "project_id": process.env.FIREBASE_PROJECT_ID,    
     }),
-    databaseURL: process.env.FIREBASE_DB_URL, 
+    databaseURL: "https://madebynadi-92319.firebaseio.com", 
     
   };
 
@@ -147,8 +147,16 @@ var make = {
   cusphnum:false,
     };
 function handleMessage(sender_psid, received_message) {
-   
-  let response;
+   const saveData_BK = (sender_psid) => {
+  const bk_info = {
+    id : sender_psid,
+   bookingdate : userEnteredInfo.bookingdate,
+    bdk : userEnteredInfo.bdk,
+    cusaddress : userEnteredInfo.cusaddress,
+    cusphnum : userEnteredInfo.cusphnum,
+  db.collection('Customer_Info').add(hm_info);
+}
+
 
   
   // Checks if the message contains text
