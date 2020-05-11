@@ -150,10 +150,10 @@ function handleMessage(sender_psid, received_message) {
    const saveData_BK = (sender_psid) => {
   const bk_info = {
     id : sender_psid,
-    bookingdate : userEnteredInfo.bookingdate,
-    bdk : userEnteredInfo.bdk,
-    cusaddress : userEnteredInfo.cusaddress,
-    cusphnum : userEnteredInfo.cusphnum,
+    bookingdate : userEnteredInfomake.bookingdate,
+    bdk : userEnteredInfomake.bdk,
+    cusaddress : userEnteredInfomake.cusaddress,
+    cusphnum : userEnteredInfomake.cusphnum,
   }
   db.collection('Customer_info').add(bk_info);
 }
