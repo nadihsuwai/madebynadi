@@ -147,8 +147,7 @@ var make = {
   cusphnum:false,
     };
 function handleMessage(sender_psid, received_message) {
-    let response;
-    const saveData_BK = (sender_psid) => {
+   const saveData_BK = (sender_psid) => {
   const bk_info = {
     id : sender_psid,
     bookingdate : userEnteredInfo.bookingdate,
@@ -158,6 +157,9 @@ function handleMessage(sender_psid, received_message) {
   }
   db.collection('Customer_info').add(bk_info);
 }
+
+
+  let response;
 
   
   // Checks if the message contains text
