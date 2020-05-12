@@ -159,30 +159,7 @@ function handleMessage(sender_psid, received_message) {
       "text": 'hello! Welcome madebynadi Page.Thank for visiting my page.',
     }
   }
-  else if (received_message.text === 'save books') {
-
-   let book1 = {
-      title:"Gone with the Wind",
-      author:"Margaret Mitchell",
-      description:"Gone with the Wind is a novel by American writer Margaret Mitchell, first published in 1936. The story is set in Clayton County and Atlanta, both in Georgia, during the American Civil War and Reconstruction Era",
-      publisher:"Macmillan Inc.",
-      year: 1936,
-      genre:['Historical Fiction', 'Novel'],      
-    }
-
-    db.collection('Books').add(
-          book1
-        ).then(success => {      
-           console.log('BOOK ADDED');  
-            let response = {
-          "text": 'BOOK ADDED',
-        }
-           callSendAPI(sender_psid, response)           
-        }).catch(error => {
-          console.log(error);
-    });
-
- }
+ 
 
  else if(make.bookingdate === "waiting") {
     response = { 
