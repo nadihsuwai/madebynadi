@@ -147,18 +147,7 @@ var make = {
   cusphnum:false,
     };
 function handleMessage(sender_psid, received_message) {
-   const saveData_BK = (sender_psid) => {
-  const bk_info = {
-    id : sender_psid,
-    bookingdate : userEnteredInfo.bookingdate,
-    bdk : userEnteredInfo.bdk,
-    cusaddress : userEnteredInfo.cusaddress,
-    cusphnum : userEnteredInfo.cusphnum,
-  }
-  db.collection('Customer_info').add(bk_info);
-}
-
-
+   
   let response;
 
   
