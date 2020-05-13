@@ -554,16 +554,9 @@ make.bookingdate=false;
       "text": `write the date.`
     }
     make.bookingdate = true;
-  }else if (received_message.text && make.bookingdate == true) {   
-    userEnteredmake.bookingdate =  received_message.text;
-    response = {
-      "text": `Please fill the date.`
-    }
-   make.bookingdate = false;
-   make.bdk= true;
- }
- else if (received_message.text && make.bdk == true) {
-   userEnteredmake.bdk =  received_message.text;
+  }
+ else if (received_message.text && make.bookingdate== true) {
+   userEnteredmake.bookingdate =  received_message.text;
     response = { 
       "attachment": {
                   "type": "template",
@@ -593,7 +586,7 @@ make.bookingdate=false;
                   }
                 }
     }
-    make.bdk= false;
+    make.bookingdate= false;
   }
   else  if (received_message.text == "test") {    
     // Create the payload for a basic text message, which
