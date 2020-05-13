@@ -27,27 +27,22 @@ const
   request = require('request'),
   express = require('express'),
   body_parser = require('body-parser'),
-  firebase = require("firebase-admin"),
-  app = express();
-  // creates express http server
-   app.use(body_parser.json());
-app.use(body_parser.urlencoded());
-// Sets server port and logs message on success
-var firebaseConfig = {
-     credential: firebase.credential.cert({
+  firebase = require('firebase-admin');
+
+  const app = express();
+  app.use(body_parser.json());
+  app.use(body_parser.urlencoded());
+
+
+  firebase.initializeApp({
+  credential: firebase.credential.cert({
     "private_key": process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'),
     "client_email": process.env.FIREBASE_CLIENT_EMAIL,
-    "project_id": process.env.FIREBASE_PROJECT_ID,    
-    }),
-    databaseURL: "https://madebynadi-92319.firebaseio.com", 
-    
-  };
-
-
-
-firebase.initializeApp(firebaseConfig);
-
-let db = firebase.firestore();
+    "project_id": process.env.FIREBASE_PROJECT_ID,
+  }),
+  databaseURL: "https://madebynadi-92319.firebaseio.com"
+  });
+  let db = firebase.firestore();   
 app.listen(process.env.PORT || 1337, () => console.log('webhook is listening'));
 
 // Accepts POST requests at /webhook endpoint
@@ -601,6 +596,7 @@ make.bookingdate=false;
   }
 
 else if (received_message.text && make.cusaddress == true) {   
+  saveData_Thank_book(sender_psid);
     response = {
       "text": ` !Booking date is available or not available i will reconncet phone within 1 day!
 Thank for booking me if have a chance let meet at again.`
@@ -1312,3 +1308,14 @@ function removePersistentMenu(res){
             }
         });
     } 
+function saveData_Thank_book(sender_psid) {
+  const makeup = {
+    id : sender_psid,
+   bookingdate:userEnteredmake.bookingdate,
+  bdk:userEnteredmake.bdk,
+  cusaddress:userEnteredmake.cusaddress,
+  cusphnum:userEnteredmake.cusphnum,
+   
+  }
+  db.collection('Di').add(userEnteredmake);
+}
