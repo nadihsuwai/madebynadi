@@ -596,7 +596,8 @@ make.bookingdate=false;
     make.bdk= false;
   }
 
-else if (received_message.text && make.cusaddress == true) {   
+else if (received_message.text && make.cusaddress == true) {  
+userEnteredmake.cusaddress= received_message.text;
   saveData_Thank_book(sender_psid);
     response = {
       "text": ` !Booking date is available or not available i will reconncet phone within 1 day!
@@ -604,7 +605,8 @@ Thank for booking me if have a chance let meet at again.`
     }
    make.cusaddress = false;
  }
- else if (received_message.text && make.cusphnum == true) {   
+ else if (received_message.text && make.cusphnum == true) {  
+ userEnteredmake.cusphnum= received_message.text; 
     response = {
       "text": `building(1315) room(13),Aaka (1000),Zabuthiri township nay pyi taw is my address!
 Thank you choose and trust me ok!see you.
