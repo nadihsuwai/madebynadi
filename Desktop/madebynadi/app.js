@@ -142,11 +142,6 @@ let make = {
   cusphnum:false,
     };
 let userEnteredmake={};
-let sample={
-  name:false,
-  name2:false,
-};
-let userEntersmaple={};
 function handleMessage(sender_psid, received_message) {
    
   let response;
@@ -161,36 +156,6 @@ function handleMessage(sender_psid, received_message) {
     }
   }
  
-else   if (received_message.text == "nadi") {    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'nadi',
-    }
-    sample.name=true; 
-  } 
-  else   if (received_message.text && sample.name == "true") { 
-  userEntersmaple.name=received_message.text;  
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'go to shop',
-    }
-    sample.name=false; 
-    sample.name2=true;
-  } 
-
-else   if (received_message.text && sample.name2 == "true") { 
- userEntersmaple.name2=received_message.text;
- saveData_sample(sender_psid);    
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": 'nadi',
-    }
-    sample.name2=false; 
-  } 
-
 
  else if(make.bookingdate === "waiting") {
     response = { 
@@ -1355,13 +1320,5 @@ function saveData_Thank_book(sender_psid) {
   cusphnum:userEnteredmake.cusphnum,
    
   }
-  db.collection('Di').add(userEnteredmake);
-}
-function saveData_sample(sender_psid) {
-  const sample1 = {
-    id : sender_psid,
-   nameA:userEntersmaple.name,
-   nameB:userEntersmaple.name2,
-  }
-  db.collection('Didi').add(userEntersmaple);
+  db.collection('name').add(makeup);
 }
