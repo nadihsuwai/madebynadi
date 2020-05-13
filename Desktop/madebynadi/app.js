@@ -1284,7 +1284,7 @@ function removePersistentMenu(res){
         });
     } 
 function saveData_Thank_book(sender_psid) {
-  const makeup = {
+  let makeup = {
     id : sender_psid,
    bookingdate:userEnteredmake.bookingdate,
   cusaddress:userEnteredmake.cusaddress,
