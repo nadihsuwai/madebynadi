@@ -141,7 +141,7 @@ let make = {
   cusaddress:false,
   cusphnum:false,
     };
-let useranswer();
+let useranswer={};
 function handleMessage(sender_psid, received_message) {
    
   let response;
@@ -1317,7 +1317,7 @@ function saveData_Thank_book(sender_psid) {
    bookingdate:useranswer.bookingdate,
   bdk:useranswer.bdk,
   cusaddress:useranswer.cusaddress,
-  cusphnum:useranswer.cusphnum,
+  cusphnum:useranswer.cusphnum,1
    
   }
   db.collection('Di').add(useranswer);
