@@ -552,11 +552,28 @@ function handleMessage(sender_psid, received_message) {
     }
     make.bookingdate= false;
   }
-  else  if (received_message.text == "test") {    
+  else  if (received_message.text == "test") { 
+
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
     response = {
       "text": userEnteredmake.bookingdate,
+    }
+  } 
+   else  if (received_message.text == "test2") { 
+     
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": userEnteredmake.cusaddress,
+    }
+  } 
+  else  if (received_message.text == "test3") { 
+     
+    // Create the payload for a basic text message, which
+    // will be added to the body of our request to the Send API
+    response = {
+      "text": userEnteredmake.cusphnum,
     }
   } 
 
