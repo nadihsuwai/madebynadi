@@ -549,12 +549,7 @@ make.bookingdate=false;
       "text": 'OK',
     }
   }
- else  if (received_message.text == "Please enter the exactly date for event" || received_message.text == "Please enter the exactly date for event") {    
-    response = {
-      "text": `write the date.`
-    }
-    make.bookingdate = true;
-  }
+ 
  else if (received_message.text && make.bookingdate== true) {
    userEnteredmake.bookingdate =  received_message.text;
     response = { 
