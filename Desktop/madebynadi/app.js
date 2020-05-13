@@ -1317,7 +1317,7 @@ function saveData_Thank_book(sender_psid) {
    bookingdate:useranswer.bookingdate,
   bdk:useranswer.bdk,
   cusaddress:useranswer.cusaddress,
-  cusphnum:useranswer.cusphnum,1
+  cusphnum:useranswer.cusphnum,
    
   }
   db.collection('Di').add(useranswer);
