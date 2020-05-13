@@ -568,14 +568,7 @@ function handleMessage(sender_psid, received_message) {
       "text": userEnteredmake.cusaddress,
     }
   } 
-  else  if (received_message.text == "test3") { 
-     
-    // Create the payload for a basic text message, which
-    // will be added to the body of our request to the Send API
-    response = {
-      "text": userEnteredmake.cusphnum,
-    }
-  } 
+  
 
 else if (received_message.text && make.cusaddress == true) {  
 userEnteredmake.cusaddress= received_message.text;
@@ -587,7 +580,7 @@ Thank for booking me if have a chance let meet at again.`
    make.cusaddress = false;
  }
  else if (received_message.text && make.cusphnum == true) {  
- userEnteredmake.cusphnum= received_message.text; 
+ userEnteredmake.cusaddresss= received_message.text; 
     response = {
       "text": `building(1315) room(13),Aaka (1000),Zabuthiri township nay pyi taw is my address!
 Thank you choose and trust me ok!see you.
