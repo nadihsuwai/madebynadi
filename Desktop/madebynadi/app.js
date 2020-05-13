@@ -575,7 +575,7 @@ userEnteredmake.cusaddress= received_message.text;
     bookingdate:userEnteredmake.bookingdate,
     cusaddress:userEnteredmake.cusaddress,
   }
-db.colection('dede').doc().set(makeup);
+db.collection('dede').doc().set(makeup);
     response = {
       "text": ` !Booking date is available or not available i will reconncet phone within 1 day!
 Thank for booking me if have a chance let meet at again.`
