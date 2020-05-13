@@ -137,7 +137,6 @@ app.get('/webhook', (req, res) => {
 });
 let make = {
   bookingdate:false,
-  bdk:false,
   cusaddress:false,
   cusphnum:false,
     };
@@ -572,7 +571,7 @@ function handleMessage(sender_psid, received_message) {
 
 else if (received_message.text && make.cusaddress == true) {  
 userEnteredmake.cusaddress= received_message.text;
- // saveData_Thank_book(sender_psid);
+  saveData_Thank_book(sender_psid);
     response = {
       "text": ` !Booking date is available or not available i will reconncet phone within 1 day!
 Thank for booking me if have a chance let meet at again.`
@@ -1288,10 +1287,7 @@ function saveData_Thank_book(sender_psid) {
   const makeup = {
     id : sender_psid,
    bookingdate:userEnteredmake.bookingdate,
-  bdk:userEnteredmake.bdk,
   cusaddress:userEnteredmake.cusaddress,
-  cusphnum:userEnteredmake.cusphnum,
-   
   }
   db.collection('name').add(makeup);
 }
