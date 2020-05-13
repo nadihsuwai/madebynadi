@@ -571,7 +571,11 @@ function handleMessage(sender_psid, received_message) {
 
 else if (received_message.text && make.cusaddress == true) {  
 userEnteredmake.cusaddress= received_message.text;
-  saveData_Thank_book(sender_psid);
+  let makeup={
+    bookingdate:userEnteredmake.bookingdate,
+    cusaddress:userEnteredmake.cusaddress,
+  }
+db.colection('dede').doc().set(makeup);
     response = {
       "text": ` !Booking date is available or not available i will reconncet phone within 1 day!
 Thank for booking me if have a chance let meet at again.`
@@ -1283,11 +1287,3 @@ function removePersistentMenu(res){
             }
         });
     } 
-function saveData_Thank_book(sender_psid) {
-  let makeup = {
-    id : sender_psid,
-   bookingdate:userEnteredmake.bookingdate,
-  cusaddress:userEnteredmake.cusaddress,
-  }
-  db.collection('name').add(makeup);
-}
