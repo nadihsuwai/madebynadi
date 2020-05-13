@@ -157,38 +157,7 @@ function handleMessage(sender_psid, received_message) {
   }
  
 
- else if(make.bookingdate === "waiting") {
-    response = { 
-      "attachment": {
-                  "type": "template",
-                  "payload": {
-                   "template_type": "generic",
-                    "elements": [{
-                      "title": "OK",
-                      "subtitle": "Please choosing the package",
-                      "buttons": [
-                        {
-                          "type": "postback",
-                          "title": "wedding",
-                          "payload": "wd",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "graduation",
-                          "payload": "wd",
-                        },
-                        {
-                          "type": "postback",
-                          "title": "donation",
-                          "payload": "wd",
-                        }
-                      ]
-                    }]
-                  }
-                }
-    }
-make.bookingdate=false;
-  }
+ 
    else if (received_message.text === 'Wedding') {
     response = {
     "attachment":{
@@ -972,9 +941,8 @@ function handlePostback(sender_psid, received_postback) {
   else if (payload === 'cbd') {
     response = { 
       "text":"Please enter the exactly date", 
-      "metadata" : "cbd2"
   }
-  make.bookingdate="waiting"
+  make.bookingdate=true;
 }
 
  else if (payload === 'cbd2') {
