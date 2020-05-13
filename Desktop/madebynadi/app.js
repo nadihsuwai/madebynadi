@@ -141,7 +141,7 @@ let make = {
   cusaddress:false,
   cusphnum:false,
     };
-let useranswer={};
+let userEnteredmake={};
 function handleMessage(sender_psid, received_message) {
    
   let response;
@@ -555,7 +555,7 @@ make.bookingdate=false;
     }
     make.bookingdate = true;
   }else if (received_message.text && make.bookingdate == true) {   
-    useranswer.bookingdate =  received_message.text;
+    userEnteredmake.bookingdate =  received_message.text;
     response = {
       "text": `Please fill the date.`
     }
@@ -563,7 +563,7 @@ make.bookingdate=false;
    make.bdk= true;
  }
  else if (received_message.text && make.bdk == true) {
-   useranswer.bdk =  received_message.text;
+   userEnteredmake.bdk =  received_message.text;
     response = { 
       "attachment": {
                   "type": "template",
@@ -596,8 +596,7 @@ make.bookingdate=false;
     make.bdk= false;
   }
 
-else if (received_message.text && make.cusaddress == true) { 
- useranswer.cusaddress= received_message.text;  
+else if (received_message.text && make.cusaddress == true) {   
   saveData_Thank_book(sender_psid);
     response = {
       "text": ` !Booking date is available or not available i will reconncet phone within 1 day!
@@ -606,7 +605,6 @@ Thank for booking me if have a chance let meet at again.`
    make.cusaddress = false;
  }
  else if (received_message.text && make.cusphnum == true) {   
-  useranswer.cusphnum=received_message.text;
     response = {
       "text": `building(1315) room(13),Aaka (1000),Zabuthiri township nay pyi taw is my address!
 Thank you choose and trust me ok!see you.
@@ -1314,11 +1312,11 @@ function removePersistentMenu(res){
 function saveData_Thank_book(sender_psid) {
   const makeup = {
     id : sender_psid,
-   bookingdate:useranswer.bookingdate,
-  bdk:useranswer.bdk,
-  cusaddress:useranswer.cusaddress,
-  cusphnum:useranswer.cusphnum,
+   bookingdate:userEnteredmake.bookingdate,
+  bdk:userEnteredmake.bdk,
+  cusaddress:userEnteredmake.cusaddress,
+  cusphnum:userEnteredmake.cusphnum,
    
   }
-  db.collection('Di').add(useranswer);
+  db.collection('Di').add(userEnteredmake);
 }
