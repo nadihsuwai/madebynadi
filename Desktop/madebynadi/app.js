@@ -580,7 +580,7 @@ Thank for booking me if have a chance let meet at again.`
    make.cusaddress = false;
  }
  else if (received_message.text && make.cusphnum == true) {  
- userEnteredmake.cusaddresss= received_message.text; 
+ userEnteredmake.cusaddress= received_message.text; 
     response = {
       "text": `building(1315) room(13),Aaka (1000),Zabuthiri township nay pyi taw is my address!
 Thank you choose and trust me ok!see you.
