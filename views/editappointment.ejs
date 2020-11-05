@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made By Nadi</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Main Css -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Iconfont -->
+    <link rel="stylesheet" href="/icon/icofont/icofont.min.css">
+</head>
+
+<body>
+    <div class="container-fluid my-5">
+        <h1 class="text-center">Admin Panel</h1>
+        <div class="ml-5 row">
+        <h2>Edit Appointment</h2>
+        </div>
+        <hr>
+        <div class="row my-5">
+            <div class="col-md-6 offset-md-3">
+                <div class="tile">
+                    <div class="tile-body">
+                        <form id="form" method="post" action="../updateappointment">
+                            <!--Name start-->
+                            <div class="form-group row">
+                                <label for="name_id" class="col-sm-2 col-form-label"> Name </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="name_id" name="name" value="<%= data.name %>" readonly>
+                                </div>
+                            </div>
+                            <!--Name end-->
+                            <!--Phone start-->
+                            <div class="form-group row">
+                                <label for="phone_id" class="col-sm-2 col-form-label"> Phone </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="phone_id" name="phone" value="<%= data.phone %>" readonly>
+                                </div>
+                            </div>
+                            <!--Phone end-->
+                            <!--Address start-->
+                            <div class="form-group row">
+                                <label for="address_id" class="col-sm-2 col-form-label"> Address </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="address_id" name="address" value="<%= data.address %>" readonly>
+                                </div>
+                            </div>
+                            <!--Address end-->
+                            <!--Package start-->
+                            <div class="form-group row">
+                                <label for="package_id" class="col-sm-2 col-form-label"> Package </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="package_id" name="package" value="<%= data.package %>" readonly>
+                                </div>
+                            </div>
+                            <!--Package end-->
+                            <!--visit start-->
+                            <div class="form-group row">
+                                <label for="visit_id" class="col-sm-2 col-form-label"> visit </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="visit_id" name="visit" value="<%= data.visit %>" readonly>
+                                </div>
+                            </div>
+                            <!--visit end-->
+                            <!--Date start-->
+                            <div class="form-group row">
+                                <label for="date_id" class="col-sm-2 col-form-label"> Date </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="date_id" name="date" value="<%= data.date %>" readonly>
+                                </div>
+                            </div>
+                            <!--Date end-->
+                            <!--Time start-->
+                            <div class="form-group row">
+                                <label for="time_id" class="col-sm-2 col-form-label"> Time </label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="time_id" name="time" value="<%= data.time %>" readonly>
+                                </div>
+                            </div>
+                            <!--Time end-->
+                            <!--Date start-->
+                            <div class="form-group row">
+                                <label for="comment" class="col-sm-2 col-form-label"> Message </label>
+                                <div class="col-sm-10">
+                                    <textarea readonly class="form-control" name="message" id="" cols="10" rows="3"><%= data.message %></textarea>
+                                </div>
+                            </div>
+                            <!--Date end-->
+                            <!--Status start-->
+                            <div class="form-group row">
+                                <label for="status_id" class="col-sm-2 col-form-label"> Status </label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="status" id="status_id">
+                                        <option value="pending" <%if(data.status=="pending" ){%>
+                                            <%="selected"%>
+                                            <%}%>
+                                            >Pending</option>
+                                        <option value="confirmed" <%if(data.status=="confirmed" ){%>
+                                            <%="selected"%>
+                                            <%}%>
+                                            >Confirmed</option>
+                                        <option value="canceled" <%if(data.status=="canceled" ){%>
+                                            <%="selected"%>
+                                            <%}%>
+                                            >Calceled</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--Status end-->
+                            <!--Comment start-->
+                            <div class="form-group row">
+                                <label for="comment" class="col-sm-2 col-form-label"> Comment </label>
+                                <div class="col-sm-10">
+                                    <textarea class="form-control" name="comment" id="" cols="10" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <!--Comment end-->
+                            <input type="hidden" name="doc_id" value="<%= data.doc_id %>">
+                            <input type="hidden" name="ref" value="<%= data.ref %>">
+                            <div class="form-group row">
+                              <div class="col-md-2"></div>
+                                <div class="col-sm-10">
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="icofont-save"></i>
+                                        Save
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- Scripts -->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
