@@ -455,6 +455,10 @@ const handleMessage = (sender_psid, received_message) => {
 
      if (received_message.text.startsWith("feedback:")) {
         let feedback = received_message.text.slice(9);
+        let data = {
+             feedback:feedback,
+             fbid:sender_psid,
+        };
         db.collection('feedbacks').add(data).then((success) => {
             let text = "Thank you for your feedback.";
              let response = { "text": text };
