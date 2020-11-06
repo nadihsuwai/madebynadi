@@ -453,7 +453,18 @@ const handleMessage = (sender_psid, received_message) => {
     //let message;
     let response;
 
-    if (received_message.attachments) {
+     if (received_message.startsWith("feedback:")) {
+        let feedback = received_message.slice(9);
+        db.collection('feedbacks').add(data).then((success) => {
+            let text = "Thank you for your feedback.";
+             let response = { "text": text };
+             callSend(sender_psid, response);
+        }).catch((err) => {
+            console.log('Error', err);
+        });
+
+       
+    }else if (received_message.attachments) {
         handleAttachments(sender_psid, received_message.attachments);
     } else if (current_question == 'q1') {
         console.log('DATE ENTERED', received_message.text);
