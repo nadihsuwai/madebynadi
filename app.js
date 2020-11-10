@@ -169,9 +169,34 @@ app.get('/admin/appointments', async function(req, res) {
 
     });
 
+
+     const feedbacksRef = db.collection('feedbacks');
+    const snapshot2 = await feedbacksRef.get();
+
+   
+    let data2 = [];
+
+
+    if (snapshot2.empty) {
+        data2.push({});
+
+    }
+
+    
+
+    snapshot2.forEach(doc => {
+        let feedback = {};
+        feedback = doc.data();
+        feedback.doc_id = doc.id;
+
+        data2.push(feedback);
+
+    });
+
+
     console.log('DATA:', data);
 
-    res.render('appointments.ejs', { data: data });
+    res.render('appointments.ejs', { data: data,feedbackdata: data2});
 
 });
 
@@ -457,7 +482,7 @@ const handleMessage = (sender_psid, received_message) => {
         let feedback = received_message.text.slice(9);
         let data = {
              feedback:feedback,
-             fbid:sender_psid,
+             fbid:sender_psid ,
         };
         db.collection('feedbacks').add(data).then((success) => {
             let text = "Thank you for your feedback.";
