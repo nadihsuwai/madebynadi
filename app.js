@@ -150,10 +150,10 @@ app.get('/login',function(req,res){
 });
 
 
-app.get('/logout',function(req,res){ 
+app.get('/admin/logout',function(req,res){ 
     //sess = req.session;   
     req.session.destroy(null);  
-    res.redirect('login');
+    res.redirect('../login');
 });
 
 app.post('/login',function(req,res){    
