@@ -187,7 +187,10 @@ app.post('/test', function(req, res) {
 
 app.get('/admin/appointments', async function(req, res) {
 
-    const appointmentsRef = db.collection('appointments');
+    sess = req.session;
+    console.log('SESS:', sess); 
+    if(sess.login){
+        const appointmentsRef = db.collection('appointments');
     const snapshot = await appointmentsRef.get();
 
     if (snapshot.empty) {
@@ -233,6 +236,16 @@ app.get('/admin/appointments', async function(req, res) {
     console.log('DATA:', data);
 
     res.render('appointments.ejs', { data: data,feedbackdata: data2});
+
+        
+      
+    }else{
+      res.send('you are not authorized to view this page');
+    }   
+
+
+
+    
 
 });
 
